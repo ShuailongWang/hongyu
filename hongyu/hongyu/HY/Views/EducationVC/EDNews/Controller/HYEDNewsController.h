@@ -1,13 +1,13 @@
 //
-//  HYMainTabBarController.h
+//  HYEDNewsController.h
 //  hongyu
 //
 //  Created by admin on 17/2/10.
 //  Copyright © 2017年 wsl. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "HYBaseController.h"
 
-@interface HYMainTabBarController : UITabBarController
+@interface HYEDNewsController : HYBaseController
 
 @end

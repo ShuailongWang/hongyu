@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "HYMainNavController.h"
+#import "HYLoginHomeController.h"
+#import "HYEDMainTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // 设置Window
+    self.window = [[UIWindow alloc]initWithFrame: KScreen_Bounds];
+    
+    //登录
+    //    HYMainNavController *nav = [[HYMainNavController alloc]initWithRootViewController:[[HYLoginHomeController alloc]init]];
+    //    self.window.rootViewController = nav;
+    
+    //tabBar
+    self.window.rootViewController = [[HYEDMainTabBarController alloc]init];
+    
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

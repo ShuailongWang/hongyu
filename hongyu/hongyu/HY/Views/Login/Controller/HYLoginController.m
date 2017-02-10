@@ -8,7 +8,8 @@
 
 #import "HYLoginController.h"
 #import "HYRegistersController.h"
-#import "HYMainTabBarController.h"
+#import "HYEDMineController.h"
+#import "HYOTMainTabBarController.h"
 
 @interface HYLoginController ()
 
@@ -217,7 +218,7 @@
         [NSObject showSuccessMsg:@"登陆成功"];
         
         // 切换应用程序主窗口的根控制器
-        [UIApplication sharedApplication].keyWindow.rootViewController = [[HYMainTabBarController alloc] init];
+        [UIApplication sharedApplication].keyWindow.rootViewController = [[HYEDMineController alloc] init];
     });
 }
 
