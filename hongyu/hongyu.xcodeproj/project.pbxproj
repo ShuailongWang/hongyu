@@ -26,6 +26,15 @@
 		8459B7BC1E4D65E10039ED63 /* UITextView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459B7B01E4D65E10039ED63 /* UITextView+Extension.m */; };
 		8459B7BD1E4D65E10039ED63 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459B7B21E4D65E10039ED63 /* UIView+Extension.m */; };
 		8459B7BE1E4D65E10039ED63 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459B7B41E4D65E10039ED63 /* UIViewController+BackButtonHandler.m */; };
+		8459B7D51E4D66DD0039ED63 /* DLLRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459B7C31E4D66DD0039ED63 /* DLLRUCache.m */; };
+		8459B7D61E4D66DD0039ED63 /* DLCustomSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459B7C51E4D66DD0039ED63 /* DLCustomSlideView.m */; };
+		8459B7D71E4D66DD0039ED63 /* DLSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459B7C71E4D66DD0039ED63 /* DLSlideView.m */; };
+		8459B7D81E4D66DD0039ED63 /* DLFixedTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459B7CA1E4D66DD0039ED63 /* DLFixedTabbarView.m */; };
+		8459B7D91E4D66DD0039ED63 /* DLScrollTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459B7CC1E4D66DD0039ED63 /* DLScrollTabbarView.m */; };
+		8459B7DA1E4D66DD0039ED63 /* DLTabedSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459B7CF1E4D66DD0039ED63 /* DLTabedSlideView.m */; };
+		8459B7DB1E4D66DD0039ED63 /* DLUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459B7D11E4D66DD0039ED63 /* DLUtility.m */; };
+		8459B7DC1E4D66DD0039ED63 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459B7D41E4D66DD0039ED63 /* NSString+Hash.m */; };
+		8459B7DF1E4D67370039ED63 /* HYBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459B7DE1E4D67370039ED63 /* HYBaseController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +78,26 @@
 		8459B7B31E4D65E10039ED63 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
 		8459B7B41E4D65E10039ED63 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		8459B7B61E4D65E10039ED63 /* HYMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYMacros.h; sourceTree = "<group>"; };
+		8459B7C11E4D66DD0039ED63 /* DLCacheProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLCacheProtocol.h; sourceTree = "<group>"; };
+		8459B7C21E4D66DD0039ED63 /* DLLRUCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLRUCache.h; sourceTree = "<group>"; };
+		8459B7C31E4D66DD0039ED63 /* DLLRUCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLRUCache.m; sourceTree = "<group>"; };
+		8459B7C41E4D66DD0039ED63 /* DLCustomSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLCustomSlideView.h; sourceTree = "<group>"; };
+		8459B7C51E4D66DD0039ED63 /* DLCustomSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLCustomSlideView.m; sourceTree = "<group>"; };
+		8459B7C61E4D66DD0039ED63 /* DLSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSlideView.h; sourceTree = "<group>"; };
+		8459B7C71E4D66DD0039ED63 /* DLSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSlideView.m; sourceTree = "<group>"; };
+		8459B7C91E4D66DD0039ED63 /* DLFixedTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLFixedTabbarView.h; sourceTree = "<group>"; };
+		8459B7CA1E4D66DD0039ED63 /* DLFixedTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFixedTabbarView.m; sourceTree = "<group>"; };
+		8459B7CB1E4D66DD0039ED63 /* DLScrollTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLScrollTabbarView.h; sourceTree = "<group>"; };
+		8459B7CC1E4D66DD0039ED63 /* DLScrollTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLScrollTabbarView.m; sourceTree = "<group>"; };
+		8459B7CD1E4D66DD0039ED63 /* DLSlideTabbarProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSlideTabbarProtocol.h; sourceTree = "<group>"; };
+		8459B7CE1E4D66DD0039ED63 /* DLTabedSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTabedSlideView.h; sourceTree = "<group>"; };
+		8459B7CF1E4D66DD0039ED63 /* DLTabedSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTabedSlideView.m; sourceTree = "<group>"; };
+		8459B7D01E4D66DD0039ED63 /* DLUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLUtility.h; sourceTree = "<group>"; };
+		8459B7D11E4D66DD0039ED63 /* DLUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLUtility.m; sourceTree = "<group>"; };
+		8459B7D31E4D66DD0039ED63 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		8459B7D41E4D66DD0039ED63 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		8459B7DD1E4D67370039ED63 /* HYBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBaseController.h; sourceTree = "<group>"; };
+		8459B7DE1E4D67370039ED63 /* HYBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBaseController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +194,8 @@
 		8459B75F1E4D64710039ED63 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				8459B7BF1E4D66DD0039ED63 /* DLSlideView */,
+				8459B7D21E4D66DD0039ED63 /* Security */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -208,6 +239,8 @@
 		8459B7641E4D64710039ED63 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8459B7DD1E4D67370039ED63 /* HYBaseController.h */,
+				8459B7DE1E4D67370039ED63 /* HYBaseController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -601,6 +634,54 @@
 			path = Configs;
 			sourceTree = "<group>";
 		};
+		8459B7BF1E4D66DD0039ED63 /* DLSlideView */ = {
+			isa = PBXGroup;
+			children = (
+				8459B7C01E4D66DD0039ED63 /* DLCache */,
+				8459B7C41E4D66DD0039ED63 /* DLCustomSlideView.h */,
+				8459B7C51E4D66DD0039ED63 /* DLCustomSlideView.m */,
+				8459B7C61E4D66DD0039ED63 /* DLSlideView.h */,
+				8459B7C71E4D66DD0039ED63 /* DLSlideView.m */,
+				8459B7C81E4D66DD0039ED63 /* DLTabbarView */,
+				8459B7CE1E4D66DD0039ED63 /* DLTabedSlideView.h */,
+				8459B7CF1E4D66DD0039ED63 /* DLTabedSlideView.m */,
+				8459B7D01E4D66DD0039ED63 /* DLUtility.h */,
+				8459B7D11E4D66DD0039ED63 /* DLUtility.m */,
+			);
+			path = DLSlideView;
+			sourceTree = "<group>";
+		};
+		8459B7C01E4D66DD0039ED63 /* DLCache */ = {
+			isa = PBXGroup;
+			children = (
+				8459B7C11E4D66DD0039ED63 /* DLCacheProtocol.h */,
+				8459B7C21E4D66DD0039ED63 /* DLLRUCache.h */,
+				8459B7C31E4D66DD0039ED63 /* DLLRUCache.m */,
+			);
+			path = DLCache;
+			sourceTree = "<group>";
+		};
+		8459B7C81E4D66DD0039ED63 /* DLTabbarView */ = {
+			isa = PBXGroup;
+			children = (
+				8459B7C91E4D66DD0039ED63 /* DLFixedTabbarView.h */,
+				8459B7CA1E4D66DD0039ED63 /* DLFixedTabbarView.m */,
+				8459B7CB1E4D66DD0039ED63 /* DLScrollTabbarView.h */,
+				8459B7CC1E4D66DD0039ED63 /* DLScrollTabbarView.m */,
+				8459B7CD1E4D66DD0039ED63 /* DLSlideTabbarProtocol.h */,
+			);
+			path = DLTabbarView;
+			sourceTree = "<group>";
+		};
+		8459B7D21E4D66DD0039ED63 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				8459B7D31E4D66DD0039ED63 /* NSString+Hash.h */,
+				8459B7D41E4D66DD0039ED63 /* NSString+Hash.m */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -725,7 +806,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8459B7BD1E4D65E10039ED63 /* UIView+Extension.m in Sources */,
+				8459B7DC1E4D66DD0039ED63 /* NSString+Hash.m in Sources */,
 				8459B7BA1E4D65E10039ED63 /* UILabel+Extension.m in Sources */,
+				8459B7D91E4D66DD0039ED63 /* DLScrollTabbarView.m in Sources */,
+				8459B7DB1E4D66DD0039ED63 /* DLUtility.m in Sources */,
 				8459B7BE1E4D65E10039ED63 /* UIViewController+BackButtonHandler.m in Sources */,
 				8459B7BC1E4D65E10039ED63 /* UITextView+Extension.m in Sources */,
 				8459B7941E4D65570039ED63 /* HYMainNavController.m in Sources */,
@@ -734,10 +818,16 @@
 				8459B74B1E4D62B70039ED63 /* AppDelegate.m in Sources */,
 				8459B7B81E4D65E10039ED63 /* NSString+Common.m in Sources */,
 				8459B79F1E4D65BB0039ED63 /* HYLoginHomeController.m in Sources */,
+				8459B7D71E4D66DD0039ED63 /* DLSlideView.m in Sources */,
 				8459B7BB1E4D65E10039ED63 /* UITextField+Extension.m in Sources */,
 				8459B7A31E4D65C30039ED63 /* HYRegisterBtn.m in Sources */,
+				8459B7DF1E4D67370039ED63 /* HYBaseController.m in Sources */,
+				8459B7D81E4D66DD0039ED63 /* DLFixedTabbarView.m in Sources */,
+				8459B7DA1E4D66DD0039ED63 /* DLTabedSlideView.m in Sources */,
 				8459B7481E4D62B70039ED63 /* main.m in Sources */,
+				8459B7D61E4D66DD0039ED63 /* DLCustomSlideView.m in Sources */,
 				8459B79E1E4D65BB0039ED63 /* HYLoginController.m in Sources */,
+				8459B7D51E4D66DD0039ED63 /* DLLRUCache.m in Sources */,
 				8459B7B91E4D65E10039ED63 /* UIImage+Common.m in Sources */,
 				8459B7A01E4D65BB0039ED63 /* HYRegistersController.m in Sources */,
 			);
