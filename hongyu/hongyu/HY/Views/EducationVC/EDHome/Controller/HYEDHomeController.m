@@ -107,10 +107,10 @@ static NSString *UITableViewCellID = @"UITableViewCellID";
         _typeArr = @[
                      @{@"Title":@"中", @"Icon":@"error"},
                      @{@"Title":@"外", @"Icon":@"error"},
-                     @{@"Title":@"我的", @"Icon":@"error"},
-                     @{@"Title":@"我的", @"Icon":@"error"},
-                     @{@"Title":@"我的", @"Icon":@"error"},
-                     @{@"Title":@"我的", @"Icon":@"error"}
+                     @{@"Title":@"食材", @"Icon":@"error"},
+                     @{@"Title":@"服装", @"Icon":@"error"},
+                     @{@"Title":@"教材", @"Icon":@"error"},
+                     @{@"Title":@"招聘", @"Icon":@"error"}
                      ];
     }
     return _typeArr;
