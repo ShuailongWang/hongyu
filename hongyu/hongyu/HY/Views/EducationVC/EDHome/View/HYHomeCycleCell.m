@@ -7,6 +7,7 @@
 //
 
 #import "HYHomeCycleCell.h"
+#import "HYHomeModel.h"
 
 @interface HYHomeCycleCell()<SDCycleScrollViewDelegate>
 
@@ -25,33 +26,10 @@
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if( self = [super initWithStyle:style reuseIdentifier:reuseIdentifier] ){
-        [self setupUI];
+        [self.contentView addSubview:self.iconView];
+        [self.contentView addSubview:self.cycleScrollView];
     }
     return self;
-}
-
--(void)setupUI{
-    if (nil == _iconView) {
-        _iconView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 40, 40)];
-        _iconView.image = [UIImage imageNamed:@"error"];
-        [self.contentView addSubview:_iconView];
-    }
-    //
-    NSArray *titles = @[@"新列车运行图今实施 全国最长高铁列车首发",
-                        @"台媒称俄售华苏35战机焊死发动机 防技术被仿制",
-                        @"纪检官员索贿300万：听到风声退还 过后又要回来",
-                        @"虚拟世界里也可以社交？"
-                        ];
-    if (nil == _cycleScrollView) {
-        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(_iconView.right + 5, 10, KScreen_Width - _iconView.right - 15, 40) delegate:self placeholderImage:nil];
-        _cycleScrollView.scrollDirection = UICollectionViewScrollDirectionVertical;
-        _cycleScrollView.onlyDisplayText = YES;
-        _cycleScrollView.titleLabelTextColor = RGB(143, 143, 143);
-        _cycleScrollView.titleLabelBackgroundColor = kClearColor;
-        _cycleScrollView.titleLabelTextFont = [UIFont systemFontOfSize:16];
-        _cycleScrollView.titlesGroup = titles;
-        [self.contentView addSubview:_cycleScrollView];
-    }
 }
 
 /** 点击图片回调 */
@@ -59,4 +37,35 @@
     NSLog(@"%zd",index);
 }
 
+-(void)setNewsArr:(NSArray *)newsArr{
+    _newsArr = newsArr;
+    
+    NSMutableArray *arrM = [NSMutableArray array];
+    for (HYHomeNewsModel *newsModel in newsArr) {
+        [arrM addObject:newsModel.Title];
+    }
+    
+    self.cycleScrollView.titlesGroup = arrM.copy;
+}
+
+
+#pragma mark - 懒加载
+-(UIImageView *)iconView{
+    if (nil == _iconView) {
+        _iconView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 40, 40)];
+        _iconView.image = [UIImage imageNamed:@"error"];
+    }
+    return _iconView;
+}
+-(SDCycleScrollView *)cycleScrollView{
+    if (nil == _cycleScrollView) {
+        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(_iconView.right + 5, 10, KScreen_Width - _iconView.right - 15, 40) delegate:self placeholderImage:nil];
+        _cycleScrollView.scrollDirection = UICollectionViewScrollDirectionVertical;
+        _cycleScrollView.onlyDisplayText = YES;
+        _cycleScrollView.titleLabelTextColor = RGB(143, 143, 143);
+        _cycleScrollView.titleLabelBackgroundColor = kClearColor;
+        _cycleScrollView.titleLabelTextFont = [UIFont systemFontOfSize:16];
+    }
+    return _cycleScrollView;
+}
 @end

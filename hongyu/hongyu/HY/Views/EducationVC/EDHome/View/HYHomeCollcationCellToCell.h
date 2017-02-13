@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#define Title   @"Title"
-#define Icon    @"Icon"
 @interface HYHomeCollcationCellToCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;

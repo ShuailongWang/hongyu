@@ -10,4 +10,6 @@
 
 @interface HYHomeCycleCell : UITableViewCell
 
+@property (nonatomic, strong) NSArray *newsArr;
+
 @end

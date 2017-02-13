@@ -8,6 +8,7 @@
 
 #import "HYHomeCollectionCell.h"
 #import "HYHomeCollcationCellToCell.h"
+#import "HYHomeModel.h"
 
 @interface HYHomeCollectionCell()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -56,19 +57,20 @@ static NSString *HYHomeCollcationCellToCellID = @"HYHomeCollcationCellToCellID";
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     HYHomeCollcationCellToCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:HYHomeCollcationCellToCellID forIndexPath:indexPath];
     
-    NSDictionary *dict = self.typeArr[indexPath.item];
-    cell.titleLabel.text = dict[Title];
-    cell.iconImageView.image = [UIImage imageNamed: dict[Icon]];
+    HYHomeTypeModel *model = self.typeArr[indexPath.item];
+    cell.titleLabel.text = model.Title;
+    cell.iconImageView.image = [UIImage imageNamed: model.Icon];
+//    cell.iconImageView sd_setImageWithURL:[NSURL URLWithString:@""] placeholderImage:[UIImage imageNamed:@"error"];
     
     return cell;
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     //
-    NSDictionary *dict = self.typeArr[indexPath.item];
+    HYHomeTypeModel *model = self.typeArr[indexPath.item];
     
     //代理
     if ([self.delegate respondsToSelector:@selector(RGHomeCollCell:index:itemTitle:)]) {
-        [self.delegate RGHomeCollCell:self index:indexPath.item itemTitle:dict[Title]];
+        [self.delegate RGHomeCollCell:self index:indexPath.item itemTitle:model.Title];
     }
 }
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{

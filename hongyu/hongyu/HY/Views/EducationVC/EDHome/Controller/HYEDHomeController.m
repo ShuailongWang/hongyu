@@ -9,12 +9,16 @@
 #import "HYEDHomeController.h"
 #import "HYHomeCollectionCell.h"
 #import "HYHomeCycleCell.h"
+#import "HYHomeJobCell.h"
 #import "HYSectionHeadView.h"
+#import "HYHomeModel.h"
+#import "HYCVController.h"
 
 @interface HYEDHomeController ()<UITableViewDelegate, UITableViewDataSource, HYHomeCollectionCellDelegate>
 
 @property (nonatomic, strong) UITableView *myTableView;
 @property (nonatomic, strong) NSArray *typeArr;
+@property (nonatomic, strong) NSArray *homeList;
 
 @end
 
@@ -27,6 +31,7 @@ static NSString *UITableViewCellID = @"UITableViewCellID";
     // Do any additional setup after loading the view.
     
     [self setupUI];
+
 }
 
 -(void)setupUI{
@@ -36,6 +41,7 @@ static NSString *UITableViewCellID = @"UITableViewCellID";
         _myTableView.dataSource = self;
         _myTableView.bounces = NO;
         _myTableView.backgroundColor = kBagroundColor;
+        _myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_myTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:UITableViewCellID];
         [self.view addSubview:_myTableView];
     }
@@ -44,39 +50,60 @@ static NSString *UITableViewCellID = @"UITableViewCellID";
 
 #pragma mark - UITableViewDelegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return 3;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    if (section == 0 || section == 1) {
+        return 1;
+    }
+    NSArray *jobArr = self.homeList[section];
+    return jobArr.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0) {
         HYHomeCollectionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HYHomeCollectionCell"];
         if (nil == cell) {
             cell = [[HYHomeCollectionCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HYHomeCollectionCell"];
         }
-        cell.typeArr = self.typeArr;
+        cell.typeArr = self.homeList[indexPath.section];
         cell.delegate = self;
         
         return cell;
+    } else if (indexPath.section == 1) {
+        //MARK: - 文字轮播图
+        HYHomeCycleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HYHomeCycleCellID"];
+        if (nil == cell) {
+            cell = [[HYHomeCycleCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HYHomeCycleCellID"];
+        }
+        cell.newsArr = self.homeList[indexPath.section];
+        
+        return cell;
     }
-    //MARK: - 文字轮播图
-    HYHomeCycleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HYHomeCycleCellID"];
-    if (nil == cell) {
-        cell = [[HYHomeCycleCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HYHomeCycleCellID"];
-    }
+    HYHomeJobCell *cell = [HYHomeJobCell cellWithTableView:tableView NSIndexPath:indexPath];
+    
+    NSArray *jobArr = self.homeList[indexPath.section];
+    HYCVModel *CVModel = jobArr[indexPath.row];
+    cell.model = CVModel;
+    
     return cell;
     
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0) {
         return HYHomeCollectionCellHeight * 2;
+    }else if(indexPath.section == 1){
+        return 60;
     }
-    return 60;
+    return 173;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 10;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if (section == 0) {
+        return 0.01;
+    } else if (section == 1){
         return 0.01;
     }
     return 30;
@@ -84,16 +111,28 @@ static NSString *UITableViewCellID = @"UITableViewCellID";
 // 组的头视图
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     HYSectionHeadView *headView = [[HYSectionHeadView alloc]initWithFrame:CGRectMake(10, 0, KScreen_Width - 20, 30)];
-    if (section == 0) {
+    if (section == 0 || section == 1) {
         return nil;
-    }else if (section == 1){
+    }else if (section == 2){
         //判断是否有数据
         headView.nameLabel.text = @"猜你喜欢";
-    }else if (section == 2){
+    }else if (section == 3){
         //判断是否有数据
         headView.nameLabel.text = @"您可能还想看";
     }
     return headView;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.section == 2) {
+        NSArray *jobArr = self.homeList[indexPath.section];
+        HYCVModel *CVModel = jobArr[indexPath.row];
+        
+        HYCVController *CVVC = [[HYCVController alloc]init];
+        CVVC.model = CVModel;
+        [self.navigationController pushViewController:CVVC animated:YES];
+    }
 }
 
 #pragma mark - HYHomeCollectionCellDelaegate
@@ -102,18 +141,12 @@ static NSString *UITableViewCellID = @"UITableViewCellID";
 }
 
 #pragma mark - 懒加载
--(NSArray *)typeArr{
-    if (nil == _typeArr) {
-        _typeArr = @[
-                     @{@"Title":@"中", @"Icon":@"error"},
-                     @{@"Title":@"外", @"Icon":@"error"},
-                     @{@"Title":@"食材", @"Icon":@"error"},
-                     @{@"Title":@"服装", @"Icon":@"error"},
-                     @{@"Title":@"教材", @"Icon":@"error"},
-                     @{@"Title":@"招聘", @"Icon":@"error"}
-                     ];
+-(NSArray *)homeList{
+    if (nil == _homeList) {
+        _homeList = [HYHomeModel HYHomeModelWithArray];
     }
-    return _typeArr;
+    return _homeList;
 }
+
 
 @end
