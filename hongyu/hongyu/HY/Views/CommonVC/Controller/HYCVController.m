@@ -32,7 +32,7 @@ static NSString *UITableViewCellID = @"UITableViewCellID";
 
 -(void)setupUI{
     if (nil == _myTableView) {
-        _myTableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _myTableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
         _myTableView.delegate = self;
         _myTableView.dataSource = self;
         _myTableView.bounces = NO;
@@ -46,8 +46,11 @@ static NSString *UITableViewCellID = @"UITableViewCellID";
 }
 
 #pragma mark - UITableViewDelegate
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 3;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
@@ -72,7 +75,12 @@ static NSString *UITableViewCellID = @"UITableViewCellID";
     cell.emplTypeLabel.text = self.model.EmplType;
     return cell;
 }
-
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 5;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 5;
+}
 
 //MARK - model
 -(void)setModel:(HYCVModel *)model{

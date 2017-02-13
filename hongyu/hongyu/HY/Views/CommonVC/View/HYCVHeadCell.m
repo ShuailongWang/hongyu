@@ -27,8 +27,8 @@
     static CGFloat margin = 10;
     frame.origin.x = margin;
     frame.size.width -= 2 * frame.origin.x;
-    frame.origin.y += margin;
-    frame.size.height -= margin;
+//    frame.origin.y += margin;
+//    frame.size.height -= margin;
     
     [super setFrame:frame];
 }
