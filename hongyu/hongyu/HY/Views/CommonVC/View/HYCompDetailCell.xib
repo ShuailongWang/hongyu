@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HYCompDetailCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="职位详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaM-n0-H9T">
+                    <rect key="frame" x="10" y="10" width="355" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" verticalHuggingPriority="247" translatesAutoresizingMaskIntoConstraints="NO" id="Sa0-rS-ldh">
+                    <rect key="frame" x="0.0" y="40" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Y7b-nv-tDc"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="岗位职责" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdK-5V-doO">
+                    <rect key="frame" x="25" y="52" width="340" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="246" verticalCompressionResistancePriority="752" text="无" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOP-1e-0MK">
+                    <rect key="frame" x="10" y="81" width="355" height="54"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Keb-C1-4VC">
+                    <rect key="frame" x="10" y="51" width="10" height="20"/>
+                    <color key="backgroundColor" red="1" green="0.2973743043" blue="0.026217269670000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="YN9-82-QYQ"/>
+                        <constraint firstAttribute="width" constant="10" id="nUU-EN-K9z"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Sa0-rS-ldh" firstAttribute="top" secondItem="PaM-n0-H9T" secondAttribute="bottom" constant="10" id="0B4-g4-TwW"/>
+                <constraint firstItem="fdK-5V-doO" firstAttribute="leading" secondItem="Keb-C1-4VC" secondAttribute="trailing" constant="5" id="41V-Tb-lvG"/>
+                <constraint firstItem="Keb-C1-4VC" firstAttribute="leading" secondItem="PaM-n0-H9T" secondAttribute="leading" id="4UO-ma-CD3"/>
+                <constraint firstItem="OOP-1e-0MK" firstAttribute="trailing" secondItem="PaM-n0-H9T" secondAttribute="trailing" id="9Fz-rX-pjP"/>
+                <constraint firstItem="OOP-1e-0MK" firstAttribute="top" secondItem="Keb-C1-4VC" secondAttribute="bottom" constant="10" id="9UL-sl-D8P"/>
+                <constraint firstItem="PaM-n0-H9T" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="CGV-t2-3wX"/>
+                <constraint firstItem="fdK-5V-doO" firstAttribute="centerY" secondItem="Keb-C1-4VC" secondAttribute="centerY" id="CWI-6M-Hcn"/>
+                <constraint firstItem="PaM-n0-H9T" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Lj3-YN-gTw"/>
+                <constraint firstItem="Keb-C1-4VC" firstAttribute="top" secondItem="Sa0-rS-ldh" secondAttribute="bottom" constant="10" id="UOT-UK-8vL"/>
+                <constraint firstItem="OOP-1e-0MK" firstAttribute="leading" secondItem="PaM-n0-H9T" secondAttribute="leading" id="Uxy-p1-mTe"/>
+                <constraint firstAttribute="trailing" secondItem="fdK-5V-doO" secondAttribute="trailing" constant="10" id="WNb-WF-y90"/>
+                <constraint firstAttribute="trailing" secondItem="PaM-n0-H9T" secondAttribute="trailing" constant="10" id="dAy-kl-Mbk"/>
+                <constraint firstAttribute="trailing" secondItem="Sa0-rS-ldh" secondAttribute="trailing" id="hCB-bj-Gvg"/>
+                <constraint firstAttribute="bottom" secondItem="OOP-1e-0MK" secondAttribute="bottom" constant="10" id="iih-8X-m8z"/>
+                <constraint firstItem="Sa0-rS-ldh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tTp-CX-EpW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="jobDetailsLabel" destination="OOP-1e-0MK" id="t32-bi-OJX"/>
+            </connections>
+            <point key="canvasLocation" x="1.5" y="-146.5"/>
+        </view>
+    </objects>
+</document>

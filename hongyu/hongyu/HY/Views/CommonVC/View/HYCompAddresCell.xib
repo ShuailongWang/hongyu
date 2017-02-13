@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HYCompAddresCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dw7-py-Gji">
+                    <rect key="frame" x="0.0" y="40" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="QIV-wP-xVJ"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="工作地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQy-DU-wL0">
+                    <rect key="frame" x="10" y="10" width="355" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="无" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0h7-vv-XlO">
+                    <rect key="frame" x="10" y="51" width="355" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="pQy-DU-wL0" secondAttribute="trailing" constant="10" id="329-29-dgs"/>
+                <constraint firstItem="pQy-DU-wL0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="5Sa-TM-9xs"/>
+                <constraint firstItem="dw7-py-Gji" firstAttribute="top" secondItem="pQy-DU-wL0" secondAttribute="bottom" constant="10" id="Gg6-mg-7pi"/>
+                <constraint firstAttribute="bottom" secondItem="0h7-vv-XlO" secondAttribute="bottom" constant="10" id="HeQ-9t-420"/>
+                <constraint firstItem="0h7-vv-XlO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="LEx-un-sqn"/>
+                <constraint firstAttribute="trailing" secondItem="0h7-vv-XlO" secondAttribute="trailing" constant="10" id="Q5n-7W-xV7"/>
+                <constraint firstAttribute="trailing" secondItem="dw7-py-Gji" secondAttribute="trailing" id="Vvv-g2-jUl"/>
+                <constraint firstItem="0h7-vv-XlO" firstAttribute="top" secondItem="dw7-py-Gji" secondAttribute="bottom" constant="10" id="W4e-N1-Fto"/>
+                <constraint firstItem="pQy-DU-wL0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="cii-V8-JdA"/>
+                <constraint firstItem="dw7-py-Gji" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kMn-81-bC7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="workAddresLabel" destination="0h7-vv-XlO" id="Ub0-A5-QIl"/>
+            </connections>
+            <point key="canvasLocation" x="20.5" y="-26"/>
+        </view>
+    </objects>
+</document>

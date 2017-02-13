@@ -13,6 +13,12 @@
 #import "HYSectionHeadView.h"
 #import "HYHomeModel.h"
 #import "HYCVController.h"
+#import "HYCHController.h"
+#import "HYENController.h"
+#import "HYFoodController.h"
+#import "HYDressController.h"
+#import "HYTeacherController.h"
+#import "HYAdvertiseController.h"
 
 @interface HYEDHomeController ()<UITableViewDelegate, UITableViewDataSource, HYHomeCollectionCellDelegate>
 
@@ -137,7 +143,46 @@ static NSString *UITableViewCellID = @"UITableViewCellID";
 
 #pragma mark - HYHomeCollectionCellDelaegate
 -(void)RGHomeCollCell:(HYHomeCollectionCell *)homeCollCell index:(NSInteger)index itemTitle:(NSString *)itemTitle{
-    
+    switch (index) {
+        case 0:{
+            HYCHController *chVC = [[HYCHController alloc]init];
+            chVC.title = itemTitle;
+            [self.navigationController pushViewController:chVC animated:YES];
+        }
+            break;
+        case 1:{
+            HYENController *enVC = [[HYENController alloc]init];
+            enVC.title = itemTitle;
+            [self.navigationController pushViewController:enVC animated:YES];
+        }
+            break;
+        case 2:{
+            HYFoodController *foodVC = [[HYFoodController alloc]init];
+            foodVC.title = itemTitle;
+            [self.navigationController pushViewController:foodVC animated:YES];
+        }
+            break;
+        case 3:{
+            HYDressController *dressVC = [[HYDressController alloc]init];
+            dressVC.title = itemTitle;
+            [self.navigationController pushViewController:dressVC animated:YES];
+        }
+            break;
+        case 4:{
+            HYTeacherController *tearchVC = [[HYTeacherController alloc]init];
+            tearchVC.title = itemTitle;
+            [self.navigationController pushViewController:tearchVC animated:YES];
+        }
+            break;
+        case 5:{
+            HYAdvertiseController *advertiseVC = [[HYAdvertiseController alloc]init];
+            advertiseVC.title = itemTitle;
+            [self.navigationController pushViewController:advertiseVC animated:YES];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 #pragma mark - 懒加载

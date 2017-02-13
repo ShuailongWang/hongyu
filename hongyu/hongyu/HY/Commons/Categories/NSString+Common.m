@@ -114,7 +114,15 @@
 
 
 
-
+//
+-(NSString*)StringWithDate{
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *date = [dateFormat dateFromString:self];
+    
+    [dateFormat setDateFormat:@"yyyy年MM月"];
+    return [dateFormat stringFromDate:date];
+}
 
 
 

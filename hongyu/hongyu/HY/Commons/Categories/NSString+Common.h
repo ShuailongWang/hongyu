@@ -19,6 +19,7 @@
 - (BOOL)isMobile;
 - (BOOL)isValidateEmail;
 
+-(NSString*)StringWithDate;
 
 //富文本,返回红色字体,字号
 -(NSMutableAttributedString*)AttributedWithRange:(NSInteger)location length:(NSInteger)length fontSize:(CGFloat)fontSize;

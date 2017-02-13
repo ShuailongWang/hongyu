@@ -10,9 +10,9 @@
 
 @interface HYCVHeadCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *subTitleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;    //头像
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;           //用户名
+@property (weak, nonatomic) IBOutlet UILabel *subTitleLabel;        //地址-工作时间-学历
 
 + (instancetype)cellWithTableView:(UITableView *)tableView NSIndexPath:(NSIndexPath *)indexPath;
 

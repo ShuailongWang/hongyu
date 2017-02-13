@@ -8,6 +8,9 @@
 
 #import "HYBaseController.h"
 
+@class HYJobModel;
 @interface HYCompanyController : HYBaseController
+
+@property (strong,nonatomic) HYJobModel *model;
 
 @end

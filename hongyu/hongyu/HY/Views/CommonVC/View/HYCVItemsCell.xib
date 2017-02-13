@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HYCVItemsCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="186"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQB-3j-Bqr">
+                    <rect key="frame" x="10" y="10" width="355" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.98431372549999996" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00-00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUB-Ff-afR">
+                    <rect key="frame" x="10" y="40" width="355" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.37095126989999999" green="0.37746421590000001" blue="0.40781250000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="职责与业绩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryn-bf-q5e">
+                    <rect key="frame" x="10" y="68" width="355" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="无" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovP-MJ-xzi">
+                    <rect key="frame" x="10" y="95" width="355" height="81"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ryn-bf-q5e" firstAttribute="leading" secondItem="AUB-Ff-afR" secondAttribute="leading" id="A0n-PE-i4Z"/>
+                <constraint firstItem="AUB-Ff-afR" firstAttribute="trailing" secondItem="KQB-3j-Bqr" secondAttribute="trailing" id="F2m-qI-mS0"/>
+                <constraint firstAttribute="bottom" secondItem="ovP-MJ-xzi" secondAttribute="bottom" constant="10" id="HkZ-hh-aBo"/>
+                <constraint firstItem="AUB-Ff-afR" firstAttribute="leading" secondItem="KQB-3j-Bqr" secondAttribute="leading" id="Lqv-7E-BkH"/>
+                <constraint firstItem="KQB-3j-Bqr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Ow9-Cc-w8M"/>
+                <constraint firstItem="KQB-3j-Bqr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Z9g-WR-NMQ"/>
+                <constraint firstItem="AUB-Ff-afR" firstAttribute="top" secondItem="KQB-3j-Bqr" secondAttribute="bottom" constant="10" id="bLI-EV-gkK"/>
+                <constraint firstItem="ovP-MJ-xzi" firstAttribute="leading" secondItem="ryn-bf-q5e" secondAttribute="leading" id="bbZ-35-8MG"/>
+                <constraint firstItem="ovP-MJ-xzi" firstAttribute="top" secondItem="ryn-bf-q5e" secondAttribute="bottom" constant="10" id="hbs-S0-Hoh"/>
+                <constraint firstItem="ryn-bf-q5e" firstAttribute="trailing" secondItem="AUB-Ff-afR" secondAttribute="trailing" id="ny8-52-fK7"/>
+                <constraint firstAttribute="trailing" secondItem="KQB-3j-Bqr" secondAttribute="trailing" constant="10" id="rv9-1E-bJC"/>
+                <constraint firstItem="ryn-bf-q5e" firstAttribute="top" secondItem="AUB-Ff-afR" secondAttribute="bottom" constant="10" id="tD4-Nx-4Xh"/>
+                <constraint firstItem="ovP-MJ-xzi" firstAttribute="trailing" secondItem="ryn-bf-q5e" secondAttribute="trailing" id="xQP-h2-3yc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="companyDutyLabel" destination="ovP-MJ-xzi" id="WDH-Qx-096"/>
+                <outlet property="jobAddCompanyLable" destination="KQB-3j-Bqr" id="a8i-G8-zii"/>
+                <outlet property="timeLabel" destination="AUB-Ff-afR" id="4DD-wk-g8I"/>
+            </connections>
+            <point key="canvasLocation" x="158" y="-103"/>
+        </view>
+    </objects>
+</document>

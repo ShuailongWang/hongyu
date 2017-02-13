@@ -10,10 +10,10 @@
 
 @interface HYCVInforCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *inforTelLabel;
-@property (weak, nonatomic) IBOutlet UILabel *inforEmailLabel;
-@property (weak, nonatomic) IBOutlet UILabel *ageLabel;
-@property (weak, nonatomic) IBOutlet UILabel *OverseasLabel;
+@property (weak, nonatomic) IBOutlet UILabel *inforTelLabel;    //电话
+@property (weak, nonatomic) IBOutlet UILabel *inforEmailLabel;  //邮箱
+@property (weak, nonatomic) IBOutlet UILabel *ageLabel;         //年龄
+@property (weak, nonatomic) IBOutlet UILabel *OverseasLabel;    //海外
 
 
 + (instancetype)cellWithTableView:(UITableView *)tableView NSIndexPath:(NSIndexPath *)indexPath;

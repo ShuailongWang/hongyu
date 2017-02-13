@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HYCVEducationCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="教育经历" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0m-JB-EvA">
+                    <rect key="frame" x="10" y="10" width="355" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqK-kc-bba">
+                    <rect key="frame" x="0.0" y="40" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="25V-Xt-jCu"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IM-nr-JUR">
+                    <rect key="frame" x="10" y="51" width="355" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.98431372549999996" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="无" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTM-yS-wDY">
+                    <rect key="frame" x="10" y="79" width="355" height="19"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7IM-nr-JUR" firstAttribute="leading" secondItem="F0m-JB-EvA" secondAttribute="leading" id="1ZM-bS-jrQ"/>
+                <constraint firstItem="F0m-JB-EvA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="291-6d-T9J"/>
+                <constraint firstItem="VTM-yS-wDY" firstAttribute="trailing" secondItem="7IM-nr-JUR" secondAttribute="trailing" id="6Ix-rP-eAs"/>
+                <constraint firstItem="7IM-nr-JUR" firstAttribute="top" secondItem="vqK-kc-bba" secondAttribute="bottom" constant="10" id="Nvs-Zy-lFA"/>
+                <constraint firstItem="7IM-nr-JUR" firstAttribute="trailing" secondItem="F0m-JB-EvA" secondAttribute="trailing" id="OAW-am-oAU"/>
+                <constraint firstItem="vqK-kc-bba" firstAttribute="top" secondItem="F0m-JB-EvA" secondAttribute="bottom" constant="10" id="Ten-Ni-USR"/>
+                <constraint firstItem="VTM-yS-wDY" firstAttribute="leading" secondItem="7IM-nr-JUR" secondAttribute="leading" id="Voy-hA-ZKF"/>
+                <constraint firstAttribute="trailing" secondItem="vqK-kc-bba" secondAttribute="trailing" id="c33-Co-oWJ"/>
+                <constraint firstItem="VTM-yS-wDY" firstAttribute="top" secondItem="7IM-nr-JUR" secondAttribute="bottom" constant="10" id="cqY-59-qPP"/>
+                <constraint firstAttribute="bottom" secondItem="VTM-yS-wDY" secondAttribute="bottom" constant="10" id="fAR-CM-iOb"/>
+                <constraint firstItem="vqK-kc-bba" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lI8-of-gzp"/>
+                <constraint firstAttribute="trailing" secondItem="F0m-JB-EvA" secondAttribute="trailing" constant="10" id="of8-8p-7aA"/>
+                <constraint firstItem="F0m-JB-EvA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="xqn-R2-SeS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="specialSchoolLabel" destination="7IM-nr-JUR" id="cfB-AO-Vyf"/>
+                <outlet property="timeAndAcademicLabel" destination="VTM-yS-wDY" id="eq4-SR-sMz"/>
+            </connections>
+            <point key="canvasLocation" x="-57" y="-148"/>
+        </view>
+    </objects>
+</document>
