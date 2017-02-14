@@ -28,6 +28,18 @@
 		780549261E51F05C00A4761D /* HYDressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 780549251E51F05C00A4761D /* HYDressController.m */; };
 		780549291E51F06900A4761D /* HYTeacherController.m in Sources */ = {isa = PBXBuildFile; fileRef = 780549281E51F06900A4761D /* HYTeacherController.m */; };
 		7805492C1E51F07800A4761D /* HYAdvertiseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7805492B1E51F07800A4761D /* HYAdvertiseController.m */; };
+		7809442A1E532F18006BCE97 /* HYFoodDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 780944291E532F18006BCE97 /* HYFoodDetailsController.m */; };
+		780944331E533670006BCE97 /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7809442D1E533670006BCE97 /* SDBrowserImageView.m */; };
+		780944341E533670006BCE97 /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7809442F1E533670006BCE97 /* SDPhotoBrowser.m */; };
+		780944351E533670006BCE97 /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 780944321E533670006BCE97 /* SDWaitingView.m */; };
+		780944381E5336C2006BCE97 /* HYFoodDetailsPictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 780944371E5336C2006BCE97 /* HYFoodDetailsPictureCell.m */; };
+		7809443B1E534366006BCE97 /* HYFoodDetailInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7809443A1E534366006BCE97 /* HYFoodDetailInfoCell.m */; };
+		7809443D1E53436F006BCE97 /* HYFoodDetailInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7809443C1E53436F006BCE97 /* HYFoodDetailInfoCell.xib */; };
+		780944401E534D1F006BCE97 /* HYEDUpTeachController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7809443F1E534D1F006BCE97 /* HYEDUpTeachController.m */; };
+		780944431E534D3A006BCE97 /* HYEDUpJobController.m in Sources */ = {isa = PBXBuildFile; fileRef = 780944421E534D3A006BCE97 /* HYEDUpJobController.m */; };
+		780944461E534D4C006BCE97 /* HYEDUpProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 780944451E534D4C006BCE97 /* HYEDUpProjectController.m */; };
+		780944491E534F1B006BCE97 /* HYUpTearchInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 780944481E534F1B006BCE97 /* HYUpTearchInputCell.m */; };
+		7809444B1E534F23006BCE97 /* HYUpTearchInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7809444A1E534F23006BCE97 /* HYUpTearchInputCell.xib */; };
 		786792B81E5087AE003CFCB9 /* HYSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786792B71E5087AE003CFCB9 /* HYSettingController.m */; };
 		786792BB1E508CC1003CFCB9 /* HYJudgeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786792BA1E508CC1003CFCB9 /* HYJudgeController.m */; };
 		786792BE1E508CD6003CFCB9 /* HYHelpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786792BD1E508CD6003CFCB9 /* HYHelpController.m */; };
@@ -172,6 +184,29 @@
 		780549281E51F06900A4761D /* HYTeacherController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTeacherController.m; sourceTree = "<group>"; };
 		7805492A1E51F07800A4761D /* HYAdvertiseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAdvertiseController.h; sourceTree = "<group>"; };
 		7805492B1E51F07800A4761D /* HYAdvertiseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAdvertiseController.m; sourceTree = "<group>"; };
+		780944281E532F18006BCE97 /* HYFoodDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYFoodDetailsController.h; sourceTree = "<group>"; };
+		780944291E532F18006BCE97 /* HYFoodDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYFoodDetailsController.m; sourceTree = "<group>"; };
+		7809442C1E533670006BCE97 /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
+		7809442D1E533670006BCE97 /* SDBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrowserImageView.m; sourceTree = "<group>"; };
+		7809442E1E533670006BCE97 /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
+		7809442F1E533670006BCE97 /* SDPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPhotoBrowser.m; sourceTree = "<group>"; };
+		780944301E533670006BCE97 /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		780944311E533670006BCE97 /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
+		780944321E533670006BCE97 /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaitingView.m; sourceTree = "<group>"; };
+		780944361E5336C2006BCE97 /* HYFoodDetailsPictureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYFoodDetailsPictureCell.h; sourceTree = "<group>"; };
+		780944371E5336C2006BCE97 /* HYFoodDetailsPictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYFoodDetailsPictureCell.m; sourceTree = "<group>"; };
+		780944391E534366006BCE97 /* HYFoodDetailInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYFoodDetailInfoCell.h; sourceTree = "<group>"; };
+		7809443A1E534366006BCE97 /* HYFoodDetailInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYFoodDetailInfoCell.m; sourceTree = "<group>"; };
+		7809443C1E53436F006BCE97 /* HYFoodDetailInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYFoodDetailInfoCell.xib; sourceTree = "<group>"; };
+		7809443E1E534D1F006BCE97 /* HYEDUpTeachController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYEDUpTeachController.h; sourceTree = "<group>"; };
+		7809443F1E534D1F006BCE97 /* HYEDUpTeachController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYEDUpTeachController.m; sourceTree = "<group>"; };
+		780944411E534D3A006BCE97 /* HYEDUpJobController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYEDUpJobController.h; sourceTree = "<group>"; };
+		780944421E534D3A006BCE97 /* HYEDUpJobController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYEDUpJobController.m; sourceTree = "<group>"; };
+		780944441E534D4C006BCE97 /* HYEDUpProjectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYEDUpProjectController.h; sourceTree = "<group>"; };
+		780944451E534D4C006BCE97 /* HYEDUpProjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYEDUpProjectController.m; sourceTree = "<group>"; };
+		780944471E534F1B006BCE97 /* HYUpTearchInputCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HYUpTearchInputCell.h; path = hongyu/HY/Views/EducationVC/EDUpload/Controller/HYUpTearchInputCell.h; sourceTree = SOURCE_ROOT; };
+		780944481E534F1B006BCE97 /* HYUpTearchInputCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HYUpTearchInputCell.m; path = hongyu/HY/Views/EducationVC/EDUpload/Controller/HYUpTearchInputCell.m; sourceTree = SOURCE_ROOT; };
+		7809444A1E534F23006BCE97 /* HYUpTearchInputCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HYUpTearchInputCell.xib; path = hongyu/HY/Views/EducationVC/EDUpload/Controller/HYUpTearchInputCell.xib; sourceTree = SOURCE_ROOT; };
 		786792B61E5087AE003CFCB9 /* HYSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYSettingController.h; sourceTree = "<group>"; };
 		786792B71E5087AE003CFCB9 /* HYSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYSettingController.m; sourceTree = "<group>"; };
 		786792B91E508CC1003CFCB9 /* HYJudgeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYJudgeController.h; sourceTree = "<group>"; };
@@ -565,6 +600,8 @@
 				780549221E51F05100A4761D /* HYFoodController.m */,
 				8452DA0A1E52D5180037E15C /* HYFoodListController.h */,
 				8452DA0B1E52D5180037E15C /* HYFoodListController.m */,
+				780944281E532F18006BCE97 /* HYFoodDetailsController.h */,
+				780944291E532F18006BCE97 /* HYFoodDetailsController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -587,6 +624,11 @@
 				8452DA051E52B2A20037E15C /* HYFoodListCell.h */,
 				8452DA061E52B2A20037E15C /* HYFoodListCell.m */,
 				8452DA081E52B2AA0037E15C /* HYFoodListCell.xib */,
+				780944361E5336C2006BCE97 /* HYFoodDetailsPictureCell.h */,
+				780944371E5336C2006BCE97 /* HYFoodDetailsPictureCell.m */,
+				780944391E534366006BCE97 /* HYFoodDetailInfoCell.h */,
+				7809443A1E534366006BCE97 /* HYFoodDetailInfoCell.m */,
+				7809443C1E53436F006BCE97 /* HYFoodDetailInfoCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -627,6 +669,20 @@
 				8452DA181E52F2FC0037E15C /* HYTearchCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		7809442B1E533670006BCE97 /* SDPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				7809442C1E533670006BCE97 /* SDBrowserImageView.h */,
+				7809442D1E533670006BCE97 /* SDBrowserImageView.m */,
+				7809442E1E533670006BCE97 /* SDPhotoBrowser.h */,
+				7809442F1E533670006BCE97 /* SDPhotoBrowser.m */,
+				780944301E533670006BCE97 /* SDPhotoBrowserConfig.h */,
+				780944311E533670006BCE97 /* SDWaitingView.h */,
+				780944321E533670006BCE97 /* SDWaitingView.m */,
+			);
+			path = SDPhotoBrowser;
 			sourceTree = "<group>";
 		};
 		843EF2101E4DA54B00400B54 /* Custom */ = {
@@ -952,6 +1008,7 @@
 		8459B75F1E4D64710039ED63 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				7809442B1E533670006BCE97 /* SDPhotoBrowser */,
 				8459B7BF1E4D66DD0039ED63 /* DLSlideView */,
 				8459B7D21E4D66DD0039ED63 /* Security */,
 			);
@@ -1198,6 +1255,12 @@
 			children = (
 				843EF2011E4DA0D700400B54 /* HYEDUploadController.h */,
 				843EF2021E4DA0D700400B54 /* HYEDUploadController.m */,
+				7809443E1E534D1F006BCE97 /* HYEDUpTeachController.h */,
+				7809443F1E534D1F006BCE97 /* HYEDUpTeachController.m */,
+				780944411E534D3A006BCE97 /* HYEDUpJobController.h */,
+				780944421E534D3A006BCE97 /* HYEDUpJobController.m */,
+				780944441E534D4C006BCE97 /* HYEDUpProjectController.h */,
+				780944451E534D4C006BCE97 /* HYEDUpProjectController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1212,6 +1275,9 @@
 		8459B7771E4D64710039ED63 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				780944471E534F1B006BCE97 /* HYUpTearchInputCell.h */,
+				780944481E534F1B006BCE97 /* HYUpTearchInputCell.m */,
+				7809444A1E534F23006BCE97 /* HYUpTearchInputCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1648,6 +1714,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				843EF2151E4DA55F00400B54 /* CusDatePickerView.xib in Resources */,
+				7809443D1E53436F006BCE97 /* HYFoodDetailInfoCell.xib in Resources */,
 				780548ED1E51DF3F00A4761D /* HYCompHeadCell.xib in Resources */,
 				780548F21E51E61800A4761D /* HYCompJongUploadCell.xib in Resources */,
 				8452D9F41E528E6D0037E15C /* JobList in Resources */,
@@ -1661,6 +1728,7 @@
 				843EF21A1E4DA56500400B54 /* CusPickerView.xib in Resources */,
 				843EF23E1E4DB2D500400B54 /* HYNewsGuanCell.xib in Resources */,
 				8452D9B81E52847E0037E15C /* OtherHomeList in Resources */,
+				7809444B1E534F23006BCE97 /* HYUpTearchInputCell.xib in Resources */,
 				849B0EF91E51960D00952DF6 /* HYCVJobCell.xib in Resources */,
 				8452D9FF1E52AC670037E15C /* HYFoodTypeCell.xib in Resources */,
 				8452D9F21E528E5C0037E15C /* CVList in Resources */,
@@ -1743,6 +1811,7 @@
 				8452D9DD1E5289B80037E15C /* HYOEnController.m in Sources */,
 				843EF22B1E4DAA5400400B54 /* HYOTMainTabBarController.m in Sources */,
 				8459B7DC1E4D66DD0039ED63 /* NSString+Hash.m in Sources */,
+				780944401E534D1F006BCE97 /* HYEDUpTeachController.m in Sources */,
 				843EF2411E4DB2FC00400B54 /* HYEDNewsDetailsController.m in Sources */,
 				8459B7BA1E4D65E10039ED63 /* UILabel+Extension.m in Sources */,
 				8459B7D91E4D66DD0039ED63 /* DLScrollTabbarView.m in Sources */,
@@ -1770,12 +1839,17 @@
 				780548E11E51CF9600A4761D /* HYCVItemsCell.m in Sources */,
 				8452D9F71E52A29D0037E15C /* HYCyclesCell.m in Sources */,
 				780548FA1E51EA8600A4761D /* HYCompDetailCell.m in Sources */,
+				7809442A1E532F18006BCE97 /* HYFoodDetailsController.m in Sources */,
 				843EF2001E4DA0CA00400B54 /* HYEDNewsController.m in Sources */,
 				849B0EDB1E515B7100952DF6 /* HYHomeJobCell.m in Sources */,
+				7809443B1E534366006BCE97 /* HYFoodDetailInfoCell.m in Sources */,
+				780944461E534D4C006BCE97 /* HYEDUpProjectController.m in Sources */,
+				780944381E5336C2006BCE97 /* HYFoodDetailsPictureCell.m in Sources */,
 				849B0EED1E518D5100952DF6 /* HYCVHeadCell.m in Sources */,
 				8459B74B1E4D62B70039ED63 /* AppDelegate.m in Sources */,
 				8459B7B81E4D65E10039ED63 /* NSString+Common.m in Sources */,
 				780549201E51F04400A4761D /* HYENController.m in Sources */,
+				780944491E534F1B006BCE97 /* HYUpTearchInputCell.m in Sources */,
 				843EF2201E4DA6D900400B54 /* HYHomeCollectionCell.m in Sources */,
 				843EF2561E4DB9EE00400B54 /* HYMineTwoCell.m in Sources */,
 				7805491D1E51F03900A4761D /* HYCHController.m in Sources */,
@@ -1784,7 +1858,9 @@
 				780549231E51F05100A4761D /* HYFoodController.m in Sources */,
 				8459B7D71E4D66DD0039ED63 /* DLSlideView.m in Sources */,
 				8459B7BB1E4D65E10039ED63 /* UITextField+Extension.m in Sources */,
+				780944341E533670006BCE97 /* SDPhotoBrowser.m in Sources */,
 				843EF1FD1E4DA0BA00400B54 /* HYEDMineController.m in Sources */,
+				780944331E533670006BCE97 /* SDBrowserImageView.m in Sources */,
 				843EF2031E4DA0D700400B54 /* HYEDUploadController.m in Sources */,
 				8459B7A31E4D65C30039ED63 /* HYRegisterBtn.m in Sources */,
 				849B0EEA1E518BFE00952DF6 /* HYCompanyController.m in Sources */,
@@ -1819,9 +1895,11 @@
 				8459B7D51E4D66DD0039ED63 /* DLLRUCache.m in Sources */,
 				8452DA021E52AF9F0037E15C /* HYFoodSectionView.m in Sources */,
 				849B0EE01E51754600952DF6 /* HYCVModel.m in Sources */,
+				780944351E533670006BCE97 /* SDWaitingView.m in Sources */,
 				843EF23B1E4DB2D500400B54 /* HYNewsCell.m in Sources */,
 				8459B7B91E4D65E10039ED63 /* UIImage+Common.m in Sources */,
 				843EF2061E4DA11200400B54 /* HYOTHomeController.m in Sources */,
+				780944431E534D3A006BCE97 /* HYEDUpJobController.m in Sources */,
 				843EF2191E4DA56500400B54 /* CusPickerView.m in Sources */,
 				8452DA071E52B2A20037E15C /* HYFoodListCell.m in Sources */,
 				8452D9D71E52899E0037E15C /* HYOChController.m in Sources */,

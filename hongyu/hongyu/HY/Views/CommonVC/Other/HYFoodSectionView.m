@@ -24,11 +24,17 @@
             [_iconBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             _iconBtn.titleLabel.font = [UIFont systemFontOfSize:15];
             _iconBtn.userInteractionEnabled = NO;
-            [_iconBtn setTitle:@"热卖推荐" forState:UIControlStateNormal];
+            
             [self addSubview:_iconBtn];
         }
     }
     return self;
+}
+
+-(void)setTitleName:(NSString *)titleName{
+    _titleName = titleName;
+    
+    [self.iconBtn setTitle:titleName forState:UIControlStateNormal];
 }
 
 @end

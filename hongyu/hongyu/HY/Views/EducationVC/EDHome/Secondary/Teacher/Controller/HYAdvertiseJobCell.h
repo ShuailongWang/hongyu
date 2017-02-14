@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class HYCVModel;
 @interface HYAdvertiseJobCell : UICollectionViewCell
+
+@property (strong,nonatomic) HYCVModel *model;
 
 @end

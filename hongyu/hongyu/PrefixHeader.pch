@@ -39,6 +39,7 @@
 #import <TPKeyboardAvoidingCollectionView.h>
 #import <YYModel.h>
 #import "DLSlideView.h"
+#import "SDPhotoBrowser.h"
 
 #import "CusDatePickerView.h"
 #import "CusPickerView.h"

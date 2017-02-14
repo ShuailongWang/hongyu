@@ -12,6 +12,7 @@
 #import "HYFoodTypeCell.h"
 #import "HYFoodListCell.h"
 #import "HYFoodListController.h"
+#import "HYFoodDetailsController.h"
 
 @interface HYFoodController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -124,7 +125,7 @@ static NSString *HYFoodListCellID = @"HYFoodListCell";
     //组头
     if (kind == UICollectionElementKindSectionHeader) {
         HYFoodSectionView *resuableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HYFoodSectionViewID forIndexPath:indexPath];
-        
+        resuableView.titleName = @"热卖推荐";
         return resuableView;
     }
     //组尾
@@ -142,7 +143,8 @@ static NSString *HYFoodListCellID = @"HYFoodListCell";
         [self.navigationController pushViewController:foodListVC animated:YES];
         
     }else if (indexPath.section == 2){
-        
+        HYFoodDetailsController *foodDetailsVC = [[HYFoodDetailsController alloc]init];
+        [self.navigationController pushViewController:foodDetailsVC animated:YES];
     }
 }
 

@@ -10,6 +10,7 @@
 
 @interface HYFoodSectionView : UICollectionReusableView
 
+@property (copy,nonatomic) NSString *titleName;
 
 @end
 

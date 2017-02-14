@@ -102,7 +102,7 @@ static NSString *HYTearchCellID = @"HYTearchCell";
     //组头
     if (kind == UICollectionElementKindSectionHeader) {
         HYFoodSectionView *resuableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HYFoodSectionViewID forIndexPath:indexPath];
-        
+        resuableView.titleName = @"热卖推荐";
         return resuableView;
     }
     //组尾

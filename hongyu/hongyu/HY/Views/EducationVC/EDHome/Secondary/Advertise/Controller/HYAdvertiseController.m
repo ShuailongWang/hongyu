@@ -7,14 +7,17 @@
 //
 
 #import "HYAdvertiseController.h"
+#import "HYCVModel.h"
 #import "HYFoodSectionView.h"
 #import "HYAdvertiseTypeCell.h"
 #import "HYAdvertiseJobCell.h"
+#import "HYCVController.h"
 
 @interface HYAdvertiseController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) UICollectionView *myCollectionView;
 @property (nonatomic, strong) NSArray *typeArr;
+@property (strong,nonatomic) NSArray *CVList;
 
 @end
 
@@ -58,7 +61,7 @@ static NSString *HYAdvertiseJobCellID = @"HYAdvertiseJobCell";
     if(section == 0){
         return self.typeArr.count;
     }
-    return 6;
+    return self.CVList.count;
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
@@ -70,6 +73,9 @@ static NSString *HYAdvertiseJobCellID = @"HYAdvertiseJobCell";
     //列表
     HYAdvertiseJobCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:HYAdvertiseJobCellID forIndexPath:indexPath];
     
+    HYCVModel *model = self.CVList[indexPath.item];
+    cell.model = model;
+    
     return cell;
 }
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
@@ -79,7 +85,7 @@ static NSString *HYAdvertiseJobCellID = @"HYAdvertiseJobCell";
     if (indexPath.section == 0) {
         return CGSizeMake(KScreen_Width/4, 40);
     }
-    return CGSizeMake(KScreen_Width, 173);
+    return CGSizeMake(KScreen_Width, 177);
 }
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
     if (section == 0) {
@@ -97,12 +103,26 @@ static NSString *HYAdvertiseJobCellID = @"HYAdvertiseJobCell";
     //组头
     if (kind == UICollectionElementKindSectionHeader) {
         HYFoodSectionView *resuableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HYFoodSectionViewID forIndexPath:indexPath];
-        
+        resuableView.titleName = @"猜你喜欢";
         return resuableView;
     }
     //组尾
     HYFoodSectionFootView *footView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:HYFoodSectionFootViewID forIndexPath:indexPath];
     return footView;
+}
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    //类别
+    if (indexPath.section == 0) {
+        
+    }else if(indexPath.section == 1){
+        //详情
+        HYCVController *CVVC = [[HYCVController alloc]init];
+        
+        HYCVModel *model = self.CVList[indexPath.item];
+        CVVC.model = model;
+        
+        [self.navigationController pushViewController:CVVC animated:YES];
+    }
 }
 
 #pragma mark - 懒加载
@@ -112,5 +132,12 @@ static NSString *HYAdvertiseJobCellID = @"HYAdvertiseJobCell";
     }
     return _typeArr;
 }
+-(NSArray *)CVList{
+    if (nil == _CVList) {
+        _CVList = [HYCVModel HYCVModelWithArray];
+    }
+    return _CVList;
+}
+
 
 @end
