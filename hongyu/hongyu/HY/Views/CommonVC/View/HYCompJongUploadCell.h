@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class HYJobModel;
 @interface HYCompJongUploadCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;//logo
-@property (weak, nonatomic) IBOutlet UILabel *uploadNameLabel;  //发布人
-@property (weak, nonatomic) IBOutlet UILabel *upladJobLabel;//职位
-@property (weak, nonatomic) IBOutlet UILabel *companyLabel;//公司名
+@property (nonatomic, strong) HYJobModel *model;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView NSIndexPath:(NSIndexPath *)indexPath;
 

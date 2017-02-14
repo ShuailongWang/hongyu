@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class HYJobModel;
 @interface HYCompAddresCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *workAddresLabel;
+@property (nonatomic, strong) HYJobModel *model;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView NSIndexPath:(NSIndexPath *)indexPath;
 

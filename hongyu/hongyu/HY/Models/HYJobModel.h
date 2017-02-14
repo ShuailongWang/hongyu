@@ -10,6 +10,7 @@
 
 @interface HYJobModel : NSObject
 
+@property (nonatomic, strong) NSNumber *JobID;
 @property (nonatomic, copy) NSString *JobName;  //职位
 @property (nonatomic, copy) NSString *PublishTime;//时间
 @property (nonatomic, copy) NSString *PublishTimeDt;//具体时间

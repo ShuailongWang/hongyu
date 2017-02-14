@@ -39,8 +39,6 @@
         _myTableView.dataSource = self;
         _myTableView.bounces = NO;
         _myTableView.backgroundColor = kBagroundColor;
-        _myTableView.estimatedRowHeight = 120;
-        _myTableView.rowHeight = UITableViewAutomaticDimension;
         _myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:_myTableView];
     }
@@ -70,37 +68,27 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         HYCompHeadCell *cell = [HYCompHeadCell cellWithTableView:tableView NSIndexPath:indexPath];
-        cell.jobNameLabel.text = self.model.JobName;
-        cell.timeLabel.text = self.model.PublishTime;
-        cell.sepleLabel.text = self.model.Salary;
-        cell.placeLabel.text = self.model.WorkCity;
-        cell.workingExpLabel.text = self.model.WorkingExp;
-        cell.ducationLabel.text = self.model.Education;
+        cell.model = self.model;
         return cell;
     }else if (indexPath.section == 1){
         //MARK: - 发布人
         HYCompJongUploadCell *cell = [HYCompJongUploadCell cellWithTableView:tableView NSIndexPath:indexPath];
-        [cell.iconImageView sd_setImageWithURL:[NSURL URLWithString:self.model.CompanyLogo] placeholderImage:[UIImage imageNamed:@"error"]];
-        cell.upladJobLabel.text = self.model.UploadName;
-        cell.upladJobLabel.text = self.model.UploadJob;
-        cell.companyLabel.text = self.model.CompanyName;
+        cell.model = self.model;
         return cell;
     }else if (indexPath.section == 2){
         //MARK: - 岗位职责
         HYCompDetailCell *cell = [HYCompDetailCell cellWithTableView:tableView NSIndexPath:indexPath];
-        cell.jobDetailsLabel.text = self.model.JobDetails;
+        cell.model = self.model;
         return cell;
     }else if (indexPath.section == 3){
         //MARK: - 联系人
         HYCompContCell *cell = [HYCompContCell cellWithTableView:tableView NSIndexPath:indexPath];
-        cell.ContactLabel.text = self.model.ContactName;
-        cell.contactPhoneLabel.text = self.model.ContactPhone;
-        cell.contactEmailLabel.text = self.model.ContactEmail;
+        cell.model = self.model;
         return cell;
     }
     //MARK: - 工作地址
     HYCompAddresCell *cell = [HYCompAddresCell cellWithTableView:tableView NSIndexPath:indexPath];
-    cell.workAddresLabel.text = self.model.WorkAddress;
+    cell.model = self.model;
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -108,6 +96,18 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 5;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        return 172;
+    }else if (indexPath.section == 1) {
+        return 186;
+    }else if (indexPath.section == 2) {
+        return 180;
+    }else if (indexPath.section == 3) {
+        return [HYCompDetailCell cellRowHeight:self.model];
+    }
+    return 108;
 }
 
 //model赋值

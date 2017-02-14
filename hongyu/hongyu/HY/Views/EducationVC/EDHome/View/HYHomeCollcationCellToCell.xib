@@ -38,7 +38,7 @@
                 <outlet property="iconImageView" destination="ZiS-45-72C" id="gf6-eX-hdA"/>
                 <outlet property="titleLabel" destination="mXn-9p-Uws" id="RMm-mh-wWK"/>
             </connections>
-            <point key="canvasLocation" x="-103.5" y="340.5"/>
+            <point key="canvasLocation" x="-77" y="273"/>
         </view>
     </objects>
     <resources>

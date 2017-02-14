@@ -9,6 +9,7 @@
 #import "HYCHController.h"
 #import "HYHomeJobCell.h"
 #import "HYCVModel.h"
+#import "HYCVController.h"
 
 @interface HYCHController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -29,7 +30,9 @@
 
 #pragma mark - loadData
 -(void)loadData{
+    self.myData = [HYCVModel HYCVModelWithArray];
     
+    [self.myTableView reloadData];
 }
 
 #pragma mark - 设置UI
@@ -59,7 +62,27 @@
     
     return cell;
 }
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 175;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    HYCVModel *CVModel = self.myData[indexPath.row];
+    
+    HYCVController *CVVC = [[HYCVController alloc]init];
+    CVVC.model = CVModel;
+    [self.navigationController pushViewController:CVVC animated:YES];
+    
+}
 
+#pragma mark - 懒加载
+-(NSArray *)myData{
+    if (nil == _myData) {
+        _myData = [NSArray array];
+    }
+    return _myData;
+}
 
 
 @end

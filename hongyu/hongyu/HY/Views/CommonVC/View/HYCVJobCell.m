@@ -7,6 +7,17 @@
 //
 
 #import "HYCVJobCell.h"
+#import "HYCVModel.h"
+
+@interface HYCVJobCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *expectJobLabel;   //职位名称
+@property (weak, nonatomic) IBOutlet UILabel *placeLabel;       //地址
+@property (weak, nonatomic) IBOutlet UILabel *salaLabel;        //薪资
+@property (weak, nonatomic) IBOutlet UILabel *jobTypeLabel;     //职位类别
+@property (weak, nonatomic) IBOutlet UILabel *emplTypeLabel;    //求职性质
+
+@end
 
 @implementation HYCVJobCell
 
@@ -37,5 +48,14 @@
     return cell;
 }
 
+-(void)setModel:(HYCVModel *)model{
+    _model = model;
+    
+    self.expectJobLabel.text = model.ExpectJob;
+    self.placeLabel.text = model.CityDistrict;
+    self.salaLabel.text = model.Salary;
+    self.jobTypeLabel.text = model.JobType;
+    self.emplTypeLabel.text = model.EmplType;
+}
 
 @end

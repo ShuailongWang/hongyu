@@ -1,0 +1,305 @@
+[
+{
+"JobID": 123,
+"JobName": "文字编辑",
+"PublishTime": "01-13",
+"PublishTimeDt": "2017-01-13T00:00:00",
+"Salary": "2001-4000元/月",
+"Salary60": "2千-4千",
+"WorkCity": "北京",
+"WorkingExp": "不限",
+"Education": "大专",
+"WelfareTab": [
+{
+"0": "弹性工作"
+},
+{
+"1": "节日福利"
+}
+],
+"CompanyLogo": "http://img09.zhaopin.com/2012/other/mobile/mi/companyLogo/01/210500.png",
+"UploadName": "未知",
+"CompanyName": "北京哈福尔网络科技有限公司",
+"JobDetails": "如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。",
+"ContactName": "李四",
+"ContactPhone": "1234567789",
+"ContactEmail": "1234567789@qq.com",
+"WorkAddress": "北京市朝阳区朝阳路67号财满街财经中心9-2-801"
+},
+{
+"JobID": 123,
+"JobName": "音频编辑",
+"PublishTime": "01-13",
+"PublishTimeDt": "2017-01-13T00:00:00",
+"Salary": "3000-5000元/月",
+"Salary60": "3千-5千",
+"WorkCity": "北京",
+"WorkingExp": "不限",
+"Education": "大专",
+"WelfareTab": [
+{
+"0": "年底双薪"
+},
+{
+"1": "加班补助"
+},
+{
+"2": "弹性工作"
+},
+{
+"3": "带薪年假"
+}
+],
+"CompanyLogo": "http://img09.zhaopin.com/2012/other/mobile/mi/companyLogo/01/201100.png",
+"UploadName": "未知",
+"CompanyName": "北京哈福尔网络科技有限公司",
+"JobDetails": "如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。",
+"ContactName": "李四",
+"ContactPhone": "1234567789",
+"ContactEmail": "1234567789@qq.com",
+"WorkAddress": "北京市朝阳区朝阳路67号财满街财经中心9-2-801"
+},
+{
+"JobID": 123,
+"JobName": "会计助理/文员可做（无需经验）",
+"PublishTime": "01-13",
+"PublishTimeDt": "2017-01-13T00:00:00",
+"Salary": "2001-4000元/月",
+"Salary60": "2千-4千",
+"WorkCity": "北京",
+"WorkingExp": "不限",
+"Education": "大专",
+"WelfareTab": [
+{
+"0": "弹性工作"
+},
+{
+"1": "节日福利"
+}
+],
+"CompanyLogo": "http://img09.zhaopin.com/2012/other/mobile/mi/companyLogo/01/100000.png",
+"UploadName": "未知",
+"CompanyName": "成都艾科诺斯科技有限责任公司",
+"JobDetails": "如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。",
+"ContactName": "李四",
+"ContactPhone": "1234567789",
+"ContactEmail": "1234567789@qq.com",
+"WorkAddress": "北京市朝阳区朝阳路67号财满街财经中心9-2-801"
+},
+{
+"JobID": 123,
+"JobName": "会计助理/文员可以尝试的APP试玩",
+"PublishTime": "01-13",
+"PublishTimeDt": "2017-01-13T00:00:00",
+"Salary": "2001-4000元/月",
+"Salary60": "2千-4千",
+"WorkCity": "北京",
+"WorkingExp": "不限",
+"Education": "大专",
+"WelfareTab": [
+{
+"0": "弹性工作"
+},
+{
+"1": "节日福利"
+}
+],
+"CompanyLogo": "http://img09.zhaopin.com/2012/other/mobile/mi/companyLogo/01/201100.png",
+"UploadName": "未知",
+"CompanyName": "北京哈福尔网络科技有限公司",
+"JobDetails": "如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。",
+"ContactName": "李四",
+"ContactPhone": "1234567789",
+"ContactEmail": "1234567789@qq.com",
+"WorkAddress": "北京市朝阳区朝阳路67号财满街财经中心9-2-801"
+},
+{
+"JobID": 123,
+"JobName": "文字编辑",
+"PublishTime": "01-13",
+"PublishTimeDt": "2017-01-13T00:00:00",
+"Salary": "2001-4000元/月",
+"Salary60": "2千-4千",
+"WorkCity": "北京",
+"WorkingExp": "不限",
+"Education": "大专",
+"WelfareTab": [
+{
+"0": "弹性工作"
+},
+{
+"1": "节日福利"
+}
+],
+"CompanyLogo": "http://img09.zhaopin.com/2012/other/mobile/mi/companyLogo/01/210500.png",
+"UploadName": "未知",
+"CompanyName": "北京哈福尔网络科技有限公司",
+"JobDetails": "如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。",
+"ContactName": "李四",
+"ContactPhone": "1234567789",
+"ContactEmail": "1234567789@qq.com",
+"WorkAddress": "北京市朝阳区朝阳路67号财满街财经中心9-2-801"
+},
+{
+"JobID": 123,
+"JobName": "文字编辑",
+"PublishTime": "01-13",
+"PublishTimeDt": "2017-01-13T00:00:00",
+"Salary": "2001-4000元/月",
+"Salary60": "2千-4千",
+"WorkCity": "北京",
+"WorkingExp": "不限",
+"Education": "大专",
+"WelfareTab": [
+{
+"0": "弹性工作"
+},
+{
+"1": "节日福利"
+}
+],
+"CompanyLogo": "http://img09.zhaopin.com/2012/other/mobile/mi/companyLogo/01/210500.png",
+"UploadName": "未知",
+"CompanyName": "北京哈福尔网络科技有限公司",
+"JobDetails": "如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。",
+"ContactName": "李四",
+"ContactPhone": "1234567789",
+"ContactEmail": "1234567789@qq.com",
+"WorkAddress": "北京市朝阳区朝阳路67号财满街财经中心9-2-801"
+},
+{
+"JobID": 123,
+"JobName": "文字编辑",
+"PublishTime": "01-13",
+"PublishTimeDt": "2017-01-13T00:00:00",
+"Salary": "2001-4000元/月",
+"Salary60": "2千-4千",
+"WorkCity": "北京",
+"WorkingExp": "不限",
+"Education": "大专",
+"WelfareTab": [
+{
+"0": "弹性工作"
+},
+{
+"1": "节日福利"
+}
+],
+"CompanyLogo": "http://img09.zhaopin.com/2012/other/mobile/mi/companyLogo/01/210500.png",
+"UploadName": "未知",
+"CompanyName": "北京哈福尔网络科技有限公司",
+"JobDetails": "如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。",
+"ContactName": "李四",
+"ContactPhone": "1234567789",
+"ContactEmail": "1234567789@qq.com",
+"WorkAddress": "北京市朝阳区朝阳路67号财满街财经中心9-2-801"
+},
+{
+"JobID": 123,
+"JobName": "文字编辑",
+"PublishTime": "01-13",
+"PublishTimeDt": "2017-01-13T00:00:00",
+"Salary": "2001-4000元/月",
+"Salary60": "2千-4千",
+"WorkCity": "北京",
+"WorkingExp": "不限",
+"Education": "大专",
+"WelfareTab": [
+{
+"0": "弹性工作"
+},
+{
+"1": "节日福利"
+}
+],
+"CompanyLogo": "http://img09.zhaopin.com/2012/other/mobile/mi/companyLogo/01/210500.png",
+"UploadName": "未知",
+"CompanyName": "北京哈福尔网络科技有限公司",
+"JobDetails": "如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。",
+"ContactName": "李四",
+"ContactPhone": "1234567789",
+"ContactEmail": "1234567789@qq.com",
+"WorkAddress": "北京市朝阳区朝阳路67号财满街财经中心9-2-801"
+},
+{
+"JobID": 123,
+"JobName": "文字编辑",
+"PublishTime": "01-13",
+"PublishTimeDt": "2017-01-13T00:00:00",
+"Salary": "2001-4000元/月",
+"Salary60": "2千-4千",
+"WorkCity": "北京",
+"WorkingExp": "不限",
+"Education": "大专",
+"WelfareTab": [
+{
+"0": "弹性工作"
+},
+{
+"1": "节日福利"
+}
+],
+"CompanyLogo": "http://img09.zhaopin.com/2012/other/mobile/mi/companyLogo/01/210500.png",
+"UploadName": "未知",
+"CompanyName": "北京哈福尔网络科技有限公司",
+"JobDetails": "如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。",
+"ContactName": "李四",
+"ContactPhone": "1234567789",
+"ContactEmail": "1234567789@qq.com",
+"WorkAddress": "北京市朝阳区朝阳路67号财满街财经中心9-2-801"
+},
+{
+"JobID": 123,
+"JobName": "文字编辑",
+"PublishTime": "01-13",
+"PublishTimeDt": "2017-01-13T00:00:00",
+"Salary": "2001-4000元/月",
+"Salary60": "2千-4千",
+"WorkCity": "北京",
+"WorkingExp": "不限",
+"Education": "大专",
+"WelfareTab": [
+{
+"0": "弹性工作"
+},
+{
+"1": "节日福利"
+}
+],
+"CompanyLogo": "http://img09.zhaopin.com/2012/other/mobile/mi/companyLogo/01/210500.png",
+"UploadName": "未知",
+"CompanyName": "北京哈福尔网络科技有限公司",
+"JobDetails": "如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。",
+"ContactName": "李四",
+"ContactPhone": "1234567789",
+"ContactEmail": "1234567789@qq.com",
+"WorkAddress": "北京市朝阳区朝阳路67号财满街财经中心9-2-801"
+},
+{
+"JobID": 123,
+"JobName": "文字编辑",
+"PublishTime": "01-13",
+"PublishTimeDt": "2017-01-13T00:00:00",
+"Salary": "2001-4000元/月",
+"Salary60": "2千-4千",
+"WorkCity": "北京",
+"WorkingExp": "不限",
+"Education": "大专",
+"WelfareTab": [
+{
+"0": "弹性工作"
+},
+{
+"1": "节日福利"
+}
+],
+"CompanyLogo": "http://img09.zhaopin.com/2012/other/mobile/mi/companyLogo/01/210500.png",
+"UploadName": "未知",
+"CompanyName": "北京哈福尔网络科技有限公司",
+"JobDetails": "如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。如果你无法简洁的表达你的想法，那只说明你还不够了解它。",
+"ContactName": "李四",
+"ContactPhone": "1234567789",
+"ContactEmail": "1234567789@qq.com",
+"WorkAddress": "北京市朝阳区朝阳路67号财满街财经中心9-2-801"
+}
+]

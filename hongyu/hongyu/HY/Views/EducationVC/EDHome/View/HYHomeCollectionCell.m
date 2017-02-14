@@ -8,7 +8,7 @@
 
 #import "HYHomeCollectionCell.h"
 #import "HYHomeCollcationCellToCell.h"
-#import "HYHomeModel.h"
+#import "HYHomeTypeModel.h"
 
 @interface HYHomeCollectionCell()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 

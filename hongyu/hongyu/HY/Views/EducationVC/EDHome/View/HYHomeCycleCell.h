@@ -11,5 +11,6 @@
 @interface HYHomeCycleCell : UITableViewCell
 
 @property (nonatomic, strong) NSArray *newsArr;
+@property (copy,nonatomic) void(^myBlock)(NSString *urlStr);
 
 @end

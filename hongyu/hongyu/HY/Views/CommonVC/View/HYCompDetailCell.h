@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class HYJobModel;
 @interface HYCompDetailCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *jobDetailsLabel;
+@property (nonatomic, strong) HYJobModel *model;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView NSIndexPath:(NSIndexPath *)indexPath;
++ (CGFloat)cellRowHeight:(HYJobModel*)model;
 
 @end

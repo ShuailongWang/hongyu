@@ -7,6 +7,15 @@
 //
 
 #import "HYCompContCell.h"
+#import "HYJobModel.h"
+
+@interface HYCompContCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *ContactLabel;
+@property (weak, nonatomic) IBOutlet UILabel *contactPhoneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *contactEmailLabel;
+
+@end
 
 @implementation HYCompContCell
 
@@ -36,6 +45,13 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
     }
     return cell;
+}
+
+-(void)setModel:(HYJobModel *)model{
+    _model = model;
+    self.ContactLabel.text = model.ContactName;
+    self.contactPhoneLabel.text = model.ContactPhone;
+    self.contactEmailLabel.text = model.ContactEmail;
 }
 
 @end

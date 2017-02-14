@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class HYCVItemsModel;
 @interface HYCVItemsCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *jobAddCompanyLable;   //职位 | 公司名
-@property (weak, nonatomic) IBOutlet UILabel *timeLabel;            //时间
-@property (weak, nonatomic) IBOutlet UILabel *companyDutyLabel;     //职责
+@property (nonatomic, strong) HYCVItemsModel *model;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView NSIndexPath:(NSIndexPath *)indexPath;
++ (CGFloat)cellRowHeight:(HYCVItemsModel*)model;
 
 @end

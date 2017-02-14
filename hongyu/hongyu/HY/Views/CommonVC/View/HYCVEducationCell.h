@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class HYCVModel;
 @interface HYCVEducationCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *specialSchoolLabel;   //专业|学校
-@property (weak, nonatomic) IBOutlet UILabel *timeAndAcademicLabel; //时间|学历
+@property (nonatomic, strong) HYCVModel *model;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView NSIndexPath:(NSIndexPath *)indexPath;
 

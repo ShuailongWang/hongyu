@@ -8,14 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class HYJobModel;
 @interface HYCompHeadCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *jobNameLabel; //职位
-@property (weak, nonatomic) IBOutlet UILabel *timeLabel;    //时间
-@property (weak, nonatomic) IBOutlet UILabel *sepleLabel;   //薪资
-@property (weak, nonatomic) IBOutlet UILabel *placeLabel;   //地址
-@property (weak, nonatomic) IBOutlet UILabel *workingExpLabel;//年限
-@property (weak, nonatomic) IBOutlet UILabel *ducationLabel;//学历
+@property (nonatomic, strong) HYJobModel *model;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView NSIndexPath:(NSIndexPath *)indexPath;
 

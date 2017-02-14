@@ -40,8 +40,6 @@
         _myTableView.dataSource = self;
         _myTableView.bounces = NO;
         _myTableView.backgroundColor = kBagroundColor;
-        _myTableView.estimatedRowHeight = 120;
-        _myTableView.rowHeight = UITableViewAutomaticDimension;
         _myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:_myTableView];
     }
@@ -75,38 +73,28 @@
     if (indexPath.section == 0) {
         //MARK: - 用户头像
         HYCVHeadCell *cell = [HYCVHeadCell cellWithTableView:tableView NSIndexPath:indexPath];
-        [cell.iconImageView sd_setImageWithURL:[NSURL URLWithString:self.model.UserPicture] placeholderImage:[UIImage imageNamed:@"error"]];
-        cell.titleLabel.text = self.model.UserName;
-        cell.subTitleLabel.text = [NSString stringWithFormat:@"%@-%@-%@",self.model.WorkCity, self.model.WorkingExp, self.model.Education];
+        cell.model = self.model;
         return cell;
     } else if(indexPath.section == 1){
         //MARK: - 基本信息
         HYCVInforCell *cell = [HYCVInforCell cellWithTableView:tableView NSIndexPath:indexPath];
-        cell.ageLabel.text = [NSString stringWithFormat:@"%@", self.model.Age];
-        cell.OverseasLabel.text = self.model.Overseas ? @"有" : @"无";
+        cell.model = self.model;
         return cell;
     } else if(indexPath.section == 2){
         //MARK: - 期望职位
         HYCVJobCell *cell = [HYCVJobCell cellWithTableView:tableView NSIndexPath:indexPath];
-        cell.expectJobLabel.text = self.model.ExpectJob;
-        cell.placeLabel.text = self.model.CityDistrict;
-        cell.salaLabel.text = self.model.Salary;
-        cell.jobTypeLabel.text = self.model.JobType;
-        cell.emplTypeLabel.text = self.model.EmplType;
+        cell.model = self.model;
         return cell;
     } else if(indexPath.section == 3){
         //MARK: - 工作经历
         HYCVItemsCell *cell = [HYCVItemsCell cellWithTableView:tableView NSIndexPath:indexPath];
         HYCVItemsModel *itemModel = self.model.Items[indexPath.row];
-        cell.jobAddCompanyLable.text = [NSString stringWithFormat:@"%@ | %@", itemModel.JobName, itemModel.CompanyName];
-        cell.timeLabel.text = [NSString stringWithFormat:@"%@ - %@", [itemModel.StartTime StringWithDate], [itemModel.EndTime StringWithDate]];
-        cell.companyDutyLabel.text = itemModel.Summary;
+        cell.model = itemModel;
         return cell;
     }
     //MARK: - 教育经历
     HYCVEducationCell *cell = [HYCVEducationCell cellWithTableView:tableView NSIndexPath:indexPath];
-    cell.specialSchoolLabel.text = [NSString stringWithFormat:@"%@ | %@",self.model.Speciiality, self.model.School];
-    cell.timeAndAcademicLabel.text = [NSString stringWithFormat:@"%@-%@ %@", [self.model.StartTime StringWithDate], [self.model.EndTime StringWithDate], self.model.Education];
+    cell.model = self.model;
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -114,6 +102,21 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 5;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        return 194;
+    }else if (indexPath.section == 1) {
+        return 163;
+    }else if (indexPath.section == 2) {
+        return 180;
+    }else if (indexPath.section == 3) {
+        return [HYCVItemsCell cellRowHeight:self.model.Items[indexPath.row]];;
+    }
+    return 108;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 //MARK - model

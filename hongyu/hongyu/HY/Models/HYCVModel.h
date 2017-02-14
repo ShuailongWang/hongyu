@@ -10,6 +10,7 @@
 
 @interface HYCVModel : NSObject
 
+@property (nonatomic, strong) NSNumber *CVID;   //ID
 @property (nonatomic, copy) NSString *PublishTime;  //时间
 @property (nonatomic, copy) NSString *PublishTimeDt;//具体时间
 @property (nonatomic, copy) NSString *UserPicture;  //头像
@@ -36,6 +37,7 @@
 @property (nonatomic, copy) NSString *StartTime;//开始时间
 @property (nonatomic, copy) NSString *EndTime;//结束时间
 
++(NSArray *)HYCVModelWithArray;
 
 @end
 

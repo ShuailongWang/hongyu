@@ -7,6 +7,15 @@
 //
 
 #import "HYCVItemsCell.h"
+#import "HYCVModel.h"
+
+@interface HYCVItemsCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *jobAddCompanyLable;   //职位 | 公司名
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;            //时间
+@property (weak, nonatomic) IBOutlet UILabel *companyDutyLabel;     //职责
+
+@end
 
 @implementation HYCVItemsCell
 
@@ -36,5 +45,31 @@
     }
     return cell;
 }
+
+-(void)setModel:(HYCVItemsModel *)model{
+    _model = model;
+    
+    self.jobAddCompanyLable.text = [NSString stringWithFormat:@"%@ | %@", model.JobName, model.CompanyName];
+    self.timeLabel.text = [NSString stringWithFormat:@"%@ - %@", [model.StartTime StringWithDate], [model.EndTime StringWithDate]];
+    self.companyDutyLabel.text = model.Summary;
+}
+
++ (CGFloat)cellRowHeight:(HYCVItemsModel*)model{
+    
+    CGFloat height = [model.Summary getHeightWithFont:14 constrainedToSize:CGSizeMake(KScreen_Width - 20, CGFLOAT_MAX)];
+    
+    return (120 + height);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @end

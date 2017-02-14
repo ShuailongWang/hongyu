@@ -7,6 +7,16 @@
 //
 
 #import "HYCVInforCell.h"
+#import "HYCVModel.h"
+
+@interface HYCVInforCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *inforTelLabel;    //电话
+@property (weak, nonatomic) IBOutlet UILabel *inforEmailLabel;  //邮箱
+@property (weak, nonatomic) IBOutlet UILabel *ageLabel;         //年龄
+@property (weak, nonatomic) IBOutlet UILabel *OverseasLabel;    //海外
+
+@end
 
 @implementation HYCVInforCell
 
@@ -34,6 +44,12 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
     }
     return cell;
+}
+
+-(void)setModel:(HYCVModel *)model{
+    _model = model;
+    self.ageLabel.text = [NSString stringWithFormat:@"%@", model.Age];
+    self.OverseasLabel.text = model.Overseas ? @"有" : @"无";
 }
 
 @end

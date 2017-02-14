@@ -8,13 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class HYCVModel;
 @interface HYCVInforCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *inforTelLabel;    //电话
-@property (weak, nonatomic) IBOutlet UILabel *inforEmailLabel;  //邮箱
-@property (weak, nonatomic) IBOutlet UILabel *ageLabel;         //年龄
-@property (weak, nonatomic) IBOutlet UILabel *OverseasLabel;    //海外
-
+@property (nonatomic, strong) HYCVModel *model;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView NSIndexPath:(NSIndexPath *)indexPath;
 

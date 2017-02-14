@@ -11,7 +11,9 @@
 #import "HYHomeCycleCell.h"
 #import "HYHomeJobCell.h"
 #import "HYSectionHeadView.h"
-#import "HYHomeModel.h"
+#import "HYHomeTypeModel.h"
+#import "HYHomeNewsModel.h"
+#import "HYCVModel.h"
 #import "HYCVController.h"
 #import "HYCHController.h"
 #import "HYENController.h"
@@ -19,12 +21,14 @@
 #import "HYDressController.h"
 #import "HYTeacherController.h"
 #import "HYAdvertiseController.h"
+#import "HYWebController.h"
 
 @interface HYEDHomeController ()<UITableViewDelegate, UITableViewDataSource, HYHomeCollectionCellDelegate>
 
 @property (nonatomic, strong) UITableView *myTableView;
-@property (nonatomic, strong) NSArray *typeArr;
-@property (nonatomic, strong) NSArray *homeList;
+@property (nonatomic, strong) NSArray *homeTypeList;
+@property (nonatomic, strong) NSArray *homeNewsList;
+@property (nonatomic, strong) NSArray *homeCVList;
 
 @end
 
@@ -62,8 +66,7 @@ static NSString *UITableViewCellID = @"UITableViewCellID";
     if (section == 0 || section == 1) {
         return 1;
     }
-    NSArray *jobArr = self.homeList[section];
-    return jobArr.count;
+    return self.homeCVList.count > 0 ? self.homeCVList.count : 0;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -72,7 +75,7 @@ static NSString *UITableViewCellID = @"UITableViewCellID";
         if (nil == cell) {
             cell = [[HYHomeCollectionCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HYHomeCollectionCell"];
         }
-        cell.typeArr = self.homeList[indexPath.section];
+        cell.typeArr = self.homeTypeList;
         cell.delegate = self;
         
         return cell;
@@ -82,14 +85,19 @@ static NSString *UITableViewCellID = @"UITableViewCellID";
         if (nil == cell) {
             cell = [[HYHomeCycleCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HYHomeCycleCellID"];
         }
-        cell.newsArr = self.homeList[indexPath.section];
-        
+        cell.newsArr = self.homeNewsList;
+        cell.myBlock = ^(NSString *urlStr){
+            //web页面
+            HYWebController *webVC = [[HYWebController alloc]init];
+            webVC.strUrl = urlStr;
+            [self.navigationController pushViewController:webVC animated:YES];
+        };
         return cell;
     }
+    //MARK: - 列表
     HYHomeJobCell *cell = [HYHomeJobCell cellWithTableView:tableView NSIndexPath:indexPath];
     
-    NSArray *jobArr = self.homeList[indexPath.section];
-    HYCVModel *CVModel = jobArr[indexPath.row];
+    HYCVModel *CVModel = self.homeCVList[indexPath.row];
     cell.model = CVModel;
     
     return cell;
@@ -117,23 +125,18 @@ static NSString *UITableViewCellID = @"UITableViewCellID";
 // 组的头视图
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     HYSectionHeadView *headView = [[HYSectionHeadView alloc]initWithFrame:CGRectMake(10, 0, KScreen_Width - 20, 30)];
-    if (section == 0 || section == 1) {
-        return nil;
-    }else if (section == 2){
-        //判断是否有数据
+    //判断是否有数据
+    if (section == 2 && self.homeCVList.count > 0){
         headView.nameLabel.text = @"猜你喜欢";
-    }else if (section == 3){
-        //判断是否有数据
-        headView.nameLabel.text = @"您可能还想看";
+        return headView;
     }
-    return headView;
+    return nil;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section == 2) {
-        NSArray *jobArr = self.homeList[indexPath.section];
-        HYCVModel *CVModel = jobArr[indexPath.row];
+        HYCVModel *CVModel = self.homeCVList[indexPath.row];
         
         HYCVController *CVVC = [[HYCVController alloc]init];
         CVVC.model = CVModel;
@@ -151,7 +154,7 @@ static NSString *UITableViewCellID = @"UITableViewCellID";
         }
             break;
         case 1:{
-            HYENController *enVC = [[HYENController alloc]init];
+            HYCHController *enVC = [[HYCHController alloc]init];
             enVC.title = itemTitle;
             [self.navigationController pushViewController:enVC animated:YES];
         }
@@ -186,12 +189,23 @@ static NSString *UITableViewCellID = @"UITableViewCellID";
 }
 
 #pragma mark - 懒加载
--(NSArray *)homeList{
-    if (nil == _homeList) {
-        _homeList = [HYHomeModel HYHomeModelWithArray];
+-(NSArray *)homeTypeList{
+    if (nil == _homeTypeList) {
+        _homeTypeList = [HYHomeTypeModel HYHomeTypeModelWithArray];
     }
-    return _homeList;
+    return _homeTypeList;
 }
-
+-(NSArray *)homeNewsList{
+    if (nil == _homeNewsList) {
+        _homeNewsList = [HYHomeNewsModel HYHomeNewsModelWithArray];
+    }
+    return _homeNewsList;
+}
+-(NSArray *)homeCVList{
+    if (nil == _homeCVList) {
+        _homeCVList = [HYCVModel HYCVModelWithArray];
+    }
+    return _homeCVList;
+}
 
 @end

@@ -7,6 +7,15 @@
 //
 
 #import "HYCVHeadCell.h"
+#import "HYCVModel.h"
+
+@interface HYCVHeadCell()
+
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;    //头像
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;           //用户名
+@property (weak, nonatomic) IBOutlet UILabel *subTitleLabel;        //地址-工作时间-学历
+
+@end
 
 @implementation HYCVHeadCell
 
@@ -41,6 +50,14 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
     }
     return cell;
+}
+
+-(void)setModel:(HYCVModel *)model{
+    _model = model;
+    
+    [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:model.UserPicture] placeholderImage:[UIImage imageNamed:@"error"]];
+    self.titleLabel.text = model.UserName;
+    self.subTitleLabel.text = [NSString stringWithFormat:@"%@-%@-%@",model.WorkCity, model.WorkingExp, model.Education];
 }
 
 @end

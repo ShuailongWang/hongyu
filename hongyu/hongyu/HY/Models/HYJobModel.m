@@ -12,7 +12,7 @@
 
 +(NSArray *)HYJobModelWithArray{
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"HomeList" ofType:nil];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"JobList" ofType:nil];
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
     NSMutableArray *arrayM = [NSMutableArray array];

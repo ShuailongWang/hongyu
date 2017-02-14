@@ -8,13 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class HYCVModel;
 @interface HYCVJobCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *expectJobLabel;   //职位名称
-@property (weak, nonatomic) IBOutlet UILabel *placeLabel;       //地址
-@property (weak, nonatomic) IBOutlet UILabel *salaLabel;        //薪资
-@property (weak, nonatomic) IBOutlet UILabel *jobTypeLabel;     //职位类别
-@property (weak, nonatomic) IBOutlet UILabel *emplTypeLabel;    //求职性质
+@property (nonatomic, strong) HYCVModel *model;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView NSIndexPath:(NSIndexPath *)indexPath;
 

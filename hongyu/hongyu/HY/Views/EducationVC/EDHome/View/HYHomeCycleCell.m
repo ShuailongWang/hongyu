@@ -7,7 +7,7 @@
 //
 
 #import "HYHomeCycleCell.h"
-#import "HYHomeModel.h"
+#import "HYHomeNewsModel.h"
 
 @interface HYHomeCycleCell()<SDCycleScrollViewDelegate>
 
@@ -34,7 +34,10 @@
 
 /** 点击图片回调 */
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
-    NSLog(@"%zd",index);
+    if (self.myBlock) {
+        HYHomeNewsModel *model = self.newsArr[index];
+        self.myBlock(model.Url);
+    }
 }
 
 -(void)setNewsArr:(NSArray *)newsArr{
@@ -53,7 +56,7 @@
 -(UIImageView *)iconView{
     if (nil == _iconView) {
         _iconView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 40, 40)];
-        _iconView.image = [UIImage imageNamed:@"error"];
+        _iconView.image = [UIImage imageNamed:@"localnews"];
     }
     return _iconView;
 }

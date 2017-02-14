@@ -7,6 +7,16 @@
 //
 
 #import "HYCompJongUploadCell.h"
+#import "HYJobModel.h"
+
+@interface HYCompJongUploadCell()
+
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;//logo
+@property (weak, nonatomic) IBOutlet UILabel *uploadNameLabel;  //发布人
+@property (weak, nonatomic) IBOutlet UILabel *upladJobLabel;//职位
+@property (weak, nonatomic) IBOutlet UILabel *companyLabel;//公司名
+
+@end
 
 @implementation HYCompJongUploadCell
 
@@ -35,6 +45,14 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
     }
     return cell;
+}
+-(void)setModel:(HYJobModel *)model{
+    _model = model;
+    
+    [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:model.CompanyLogo] placeholderImage:[UIImage imageNamed:@"error"]];
+    self.upladJobLabel.text = model.UploadName;
+    self.upladJobLabel.text = model.UploadJob;
+    self.companyLabel.text = model.CompanyName;
 }
 
 @end

@@ -7,6 +7,18 @@
 //
 
 #import "HYCompHeadCell.h"
+#import "HYJobModel.h"
+
+@interface HYCompHeadCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *jobNameLabel; //职位
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;    //时间
+@property (weak, nonatomic) IBOutlet UILabel *sepleLabel;   //薪资
+@property (weak, nonatomic) IBOutlet UILabel *placeLabel;   //地址
+@property (weak, nonatomic) IBOutlet UILabel *workingExpLabel;//年限
+@property (weak, nonatomic) IBOutlet UILabel *ducationLabel;//学历
+
+@end
 
 @implementation HYCompHeadCell
 
@@ -35,6 +47,16 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
     }
     return cell;
+}
+
+-(void)setModel:(HYJobModel *)model{
+    _model = model;
+    self.jobNameLabel.text = model.JobName;
+    self.timeLabel.text = model.PublishTime;
+    self.sepleLabel.text = model.Salary;
+    self.placeLabel.text = model.WorkCity;
+    self.workingExpLabel.text = model.WorkingExp;
+    self.ducationLabel.text = model.Education;
 }
 
 @end

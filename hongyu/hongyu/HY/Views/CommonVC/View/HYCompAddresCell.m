@@ -7,6 +7,13 @@
 //
 
 #import "HYCompAddresCell.h"
+#import "HYJobModel.h"
+
+@interface HYCompAddresCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *workAddresLabel;//地址
+
+@end
 
 @implementation HYCompAddresCell
 
@@ -35,6 +42,11 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
     }
     return cell;
+}
+
+-(void)setModel:(HYJobModel *)model{
+    _model = model;
+    self.workAddresLabel.text = model.WorkAddress;
 }
 
 @end

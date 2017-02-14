@@ -7,6 +7,14 @@
 //
 
 #import "HYCVEducationCell.h"
+#import "HYCVModel.h"
+
+@interface HYCVEducationCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *specialSchoolLabel;   //专业|学校
+@property (weak, nonatomic) IBOutlet UILabel *timeAndAcademicLabel; //时间|学历
+
+@end
 
 @implementation HYCVEducationCell
 
@@ -35,6 +43,12 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
     }
     return cell;
+}
+-(void)setModel:(HYCVModel *)model{
+    _model = model;
+    
+    self.specialSchoolLabel.text = [NSString stringWithFormat:@"%@ | %@",model.Speciiality, model.School];
+    self.timeAndAcademicLabel.text = [NSString stringWithFormat:@"%@-%@ %@", [model.StartTime StringWithDate], [model.EndTime StringWithDate], model.Education];
 }
 
 @end

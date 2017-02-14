@@ -10,4 +10,10 @@
 
 @implementation HYHomeCollcationCellToCell
 
+
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    
+}
+
 @end
