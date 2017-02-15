@@ -46,6 +46,7 @@
 		786792C11E508CE9003CFCB9 /* HYAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786792C01E508CE9003CFCB9 /* HYAboutController.m */; };
 		786792C41E508DB2003CFCB9 /* HYJudgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 786792C31E508DB2003CFCB9 /* HYJudgeView.m */; };
 		786792C61E508DB9003CFCB9 /* HYJudgeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786792C51E508DB9003CFCB9 /* HYJudgeView.xib */; };
+		843450B31E54435F00EBD6A0 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 843450B21E54435F00EBD6A0 /* CustomView.m */; };
 		843EF1FA1E4DA0AB00400B54 /* HYEDHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843EF1F91E4DA0AB00400B54 /* HYEDHomeController.m */; };
 		843EF1FD1E4DA0BA00400B54 /* HYEDMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843EF1FC1E4DA0BA00400B54 /* HYEDMineController.m */; };
 		843EF2001E4DA0CA00400B54 /* HYEDNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843EF1FF1E4DA0CA00400B54 /* HYEDNewsController.m */; };
@@ -218,6 +219,8 @@
 		786792C21E508DB2003CFCB9 /* HYJudgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYJudgeView.h; sourceTree = "<group>"; };
 		786792C31E508DB2003CFCB9 /* HYJudgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYJudgeView.m; sourceTree = "<group>"; };
 		786792C51E508DB9003CFCB9 /* HYJudgeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYJudgeView.xib; sourceTree = "<group>"; };
+		843450B11E54435F00EBD6A0 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		843450B21E54435F00EBD6A0 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		843EF1F81E4DA0AB00400B54 /* HYEDHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYEDHomeController.h; sourceTree = "<group>"; };
 		843EF1F91E4DA0AB00400B54 /* HYEDHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYEDHomeController.m; sourceTree = "<group>"; };
 		843EF1FB1E4DA0BA00400B54 /* HYEDMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYEDMineController.h; sourceTree = "<group>"; };
@@ -688,6 +691,8 @@
 		843EF2101E4DA54B00400B54 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				843450B11E54435F00EBD6A0 /* CustomView.h */,
+				843450B21E54435F00EBD6A0 /* CustomView.m */,
 				843EF2111E4DA55F00400B54 /* CusDatePickerView.h */,
 				843EF2121E4DA55F00400B54 /* CusDatePickerView.m */,
 				843EF2131E4DA55F00400B54 /* CusDatePickerView.xib */,
@@ -1898,6 +1903,7 @@
 				780944351E533670006BCE97 /* SDWaitingView.m in Sources */,
 				843EF23B1E4DB2D500400B54 /* HYNewsCell.m in Sources */,
 				8459B7B91E4D65E10039ED63 /* UIImage+Common.m in Sources */,
+				843450B31E54435F00EBD6A0 /* CustomView.m in Sources */,
 				843EF2061E4DA11200400B54 /* HYOTHomeController.m in Sources */,
 				780944431E534D3A006BCE97 /* HYEDUpJobController.m in Sources */,
 				843EF2191E4DA56500400B54 /* CusPickerView.m in Sources */,

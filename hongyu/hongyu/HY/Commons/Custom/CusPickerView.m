@@ -93,7 +93,14 @@
         if (self.myBlock) {
             self.myBlock(self.selectName);
         }
+    }else{
+        if (self.dataList.count > 0) {
+            if (self.myBlock) {
+                self.myBlock(self.dataList[0]);
+            }
+        }
     }
+    
     //
     [self hide];
 }

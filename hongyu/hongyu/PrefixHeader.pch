@@ -41,6 +41,7 @@
 #import "DLSlideView.h"
 #import "SDPhotoBrowser.h"
 
+#import "CustomView.h"
 #import "CusDatePickerView.h"
 #import "CusPickerView.h"
 
